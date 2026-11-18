@@ -1,0 +1,25 @@
+test_id,area,test,expected,observed,status,evidence_path,notes
+LIC-01,Readiness,Check core and add-on subscriptions,SKU status and assignment reviewed with renewal/expiration distinction,Business Premium active with its expiration confirmed. E5 IPG available but unassigned.,PENDING,,Confirm the add-on date type and check recurring billing.
+LIC-02,Readiness,Verify pilot and control entitlements,Required base products and enabled SharePoint service plans verified on both internal test users,,NOT_RUN,,
+LIC-03,Readiness,Verify IPG benefit prerequisites and service-side auto-labeling,Applicable prerequisite and pilot assignment confirmed together with feature accessibility,,NOT_RUN,,No assigned users in the observed snapshot.
+LIC-04,Readiness,Open Data Loss Prevention Policies,Policies page and Create policy command visible,Policies page and Create policy visible in operator capture.,PASS,evidence/README.md#dlp-portal-baseline,
+LIC-05,Readiness,Check custom DLP policy Locations,SharePoint sites selectable in the custom-policy wizard,Lab operator confirmed SharePoint sites is selectable.,PASS,evidence/README.md#dlp-portal-baseline,Site scope and enforcement have separate tests.
+ENV-01,Pilot boundary,GUEST opens BFL-021.docx,Named guest opens neutral file under baseline SharePoint permissions,,NOT_RUN,,
+SIT-01,Classification,Run v1 on 20 tuning fixtures,Result for every file and confusion matrix computed,,NOT_RUN,,
+SIT-02,Classification,Run v2 on 20 tuning fixtures,Result for every file. Compare with v1 and explain remaining misclassifications.,,NOT_RUN,,
+SIT-03,Classification,Run frozen v2 on ten holdout fixtures,One observed evaluation and confusion matrix for reserved corpus,,NOT_RUN,,
+LBL-01,Sensitivity labeling,Apply BFL Finance Confidential to BFL-022.xlsx,Manual label persists in SharePoint or reopened Office file,,NOT_RUN,,
+LBL-02,Sensitivity labeling,Apply BFL Internal to BFL-024.xlsx,Manual label persists in SharePoint or reopened Office file,,NOT_RUN,,
+SIM-01,DLP simulation,Evaluate BFL-005.docx and BFL-021.docx,Positive SIT match with no neutral match after evaluation and no enforcement,,NOT_RUN,,
+SIM-02,DLP simulation,Evaluate label-only BFL-022.xlsx and unlabeled BFL-021.docx,Only the manually labeled neutral fixture matches the isolated label policy,,NOT_RUN,,If supported in the tenant.
+DLP-01,Guest baseline,GUEST opens BFL-005.docx and BFL-021.docx before enforcement,Both original named-file links open in the controlled guest session,,NOT_RUN,,
+DLP-02,DLP enforcement,GUEST reuses both original links after processing,BFL-005.docx is denied and BFL-021.docx opens,,NOT_RUN,,
+DLP-03,DLP enforcement,CONTROL opens BFL-005.docx after processing,Ordinary internal access still works,,NOT_RUN,,
+LOG-01,Triage,Correlate rule match with the guest test,Observed signal identifies fixture and policy rule in the test window,,NOT_RUN,,
+AUTO-01,Auto-labeling,Simulate with fresh unlabeled copies,Simulation identifies expected contextual SIT candidates,,NOT_RUN,,Run after confirming entitlement.
+AUTO-02,Auto-labeling,Test an unlabeled positive and neutral after policy enablement,Positive label applied and evaluated neutral remains unlabeled,,NOT_RUN,,
+RET-01,Retention,Apply and read back BFL Retain 30 Days,Label state and retain-only settings recorded for RET-BFL-023.docx,,NOT_RUN,,
+RET-02,Retention,Delete RET-BFL-023.docx as an authorized pilot user,File absent from the active library after user deletion,,NOT_RUN,,
+RET-03,Retention,Verify copy in the Preservation Hold library,Matching copy confirmed independently of the recycle bin,,NOT_RUN,,
+RBK-01,Rollback,Disable scoped DLP and repeat original guest checks,Policy off. Both original links open after processing.,,NOT_RUN,,Revoke the links only after this test.
+CLS-01,Closure,Verify final policy and subscription state,Pilot changes checked and remaining retention or labels recorded,,NOT_RUN,,

@@ -1,0 +1,107 @@
+[
+  {
+    "fixture": "BFL-001",
+    "split": "tuning",
+    "title": "Counterparty exposure review",
+    "intro": "A simulated exposure was reviewed for the quarter-end credit meeting.",
+    "detail": "Reference BFLCASE-246813. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-003",
+    "split": "tuning",
+    "title": "Portfolio reconciliation",
+    "intro": "The sample ledger contains a discrepancy awaiting a synthetic sign-off.",
+    "detail": "Reference BFLCASE-248047. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-005",
+    "split": "tuning",
+    "title": "Partner handover case",
+    "intro": "The internal finance case describes an adjustment to a sample partner balance.",
+    "detail": "Reference BFLCASE-249281. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-007",
+    "split": "tuning",
+    "title": "Reconciliation correction",
+    "intro": "The analyst prepared a proposed entry for the example month-end close.",
+    "detail": "Reference BFLCASE-250515. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-009",
+    "split": "holdout",
+    "title": "Limit review notes",
+    "intro": "The risk owner reviewed an illustrative threshold for the exercise.",
+    "detail": "Category synthetic finance case. Registered under BFLCASE-251749."
+  },
+  {
+    "fixture": "BFL-011",
+    "split": "holdout",
+    "title": "Payment review",
+    "intro": "A practice payment was referred for a second opinion.",
+    "detail": "Reference BFLCASE-252983. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-013",
+    "split": "tuning",
+    "title": "Formatting rehearsal",
+    "intro": "Design tested the appearance of an identifier on a template.",
+    "detail": "Sample reference BFLCASE-254217."
+  },
+  {
+    "fixture": "BFL-015",
+    "split": "tuning",
+    "title": "Workshop handout",
+    "intro": "This example covers an incomplete case reference used in a training session.",
+    "detail": "Reference BFLCASE-25545. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-017",
+    "split": "tuning",
+    "title": "Project close file",
+    "intro": "Two distinct entries are stored in the same file for a document assembly exercise.",
+    "detail": "Example reference BFLCASE-256685. The publishing checklist includes a draft review, a formatting review and an approval review. The publishing checklist includes a draft review, a formatting review and an approval review. The publishing checklist includes a draft review, a formatting review and an approval review. The publishing checklist includes a draft review, a formatting review and an approval review. The publishing checklist includes a draft review, a formatting review and an approval review. The publishing checklist includes a draft review, a formatting review and an approval review. Separate glossary entry synthetic finance case."
+  },
+  {
+    "fixture": "BFL-019",
+    "split": "holdout",
+    "title": "Learning intake notes",
+    "intro": "The workshop uses an alternative reference format for an exercise.",
+    "detail": "Reference TRAINCASE-257919. Category synthetic finance case."
+  },
+  {
+    "fixture": "BFL-021",
+    "split": "tuning",
+    "title": "Partner meeting agenda",
+    "intro": "Review the delivery milestones and agree the agenda for the next checkpoint.",
+    "detail": "The shared version is ready for review at the next project checkpoint."
+  },
+  {
+    "fixture": "BFL-023",
+    "split": "tuning",
+    "title": "Archive handover note",
+    "intro": "The team compiled a synthetic list of documents due for scheduled review.",
+    "detail": "The shared version is ready for review at the next project checkpoint."
+  },
+  {
+    "fixture": "BFL-025",
+    "split": "tuning",
+    "title": "Office hours summary",
+    "intro": "The project team ran a question session on the shared workspace.",
+    "detail": "The shared version is ready for review at the next project checkpoint."
+  },
+  {
+    "fixture": "BFL-027",
+    "split": "tuning",
+    "title": "Supplier onboarding agenda",
+    "intro": "The practice agenda covers introductions and workspace orientation.",
+    "detail": "The shared version is ready for review at the next project checkpoint."
+  },
+  {
+    "fixture": "BFL-029",
+    "split": "holdout",
+    "title": "Weekly planning notes",
+    "intro": "The practice team agreed the scope for the next delivery cycle.",
+    "detail": "The shared version is ready for review at the next project checkpoint."
+  }
+]

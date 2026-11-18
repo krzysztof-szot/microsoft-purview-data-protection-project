@@ -1,0 +1,31 @@
+fixture_id,path,split,ground_truth,expected_sit_v2,expected_guest_access,case_design
+BFL-001,tuning/BFL-001.docx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-002,tuning/BFL-002.xlsx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-003,tuning/BFL-003.docx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-004,tuning/BFL-004.xlsx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-005,tuning/BFL-005.docx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-006,tuning/BFL-006.xlsx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-007,tuning/BFL-007.docx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-008,tuning/BFL-008.xlsx,tuning,finance_case,MATCH,DENY,ID and nearby context
+BFL-009,holdout/BFL-009.docx,holdout,finance_case,MATCH,DENY,Context before ID
+BFL-010,holdout/BFL-010.xlsx,holdout,finance_case,MATCH,DENY,Context before ID
+BFL-011,holdout/BFL-011.docx,holdout,finance_case,MATCH,DENY,ID and nearby context
+BFL-012,holdout/BFL-012.xlsx,holdout,finance_case,MATCH,DENY,ID and nearby context
+BFL-013,tuning/BFL-013.docx,tuning,near_match,NO_MATCH,ALLOW,Valid ID without supporting phrase
+BFL-014,tuning/BFL-014.xlsx,tuning,near_match,NO_MATCH,ALLOW,Valid ID with unrelated supporting text
+BFL-015,tuning/BFL-015.docx,tuning,near_match,NO_MATCH,ALLOW,Five-digit ID with context
+BFL-016,tuning/BFL-016.xlsx,tuning,near_match,NO_MATCH,ALLOW,Seven-digit ID with context
+BFL-017,tuning/BFL-017.docx,tuning,near_match,NO_MATCH,ALLOW,Valid ID and phrase separated by over 500 characters
+BFL-018,holdout/BFL-018.xlsx,holdout,near_match,NO_MATCH,ALLOW,Valid ID without supporting phrase
+BFL-019,holdout/BFL-019.docx,holdout,near_match,NO_MATCH,ALLOW,Wrong prefix with context
+BFL-020,holdout/BFL-020.xlsx,holdout,near_match,NO_MATCH,ALLOW,Valid ID and phrase separated by over 500 characters
+BFL-021,tuning/BFL-021.docx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-022,tuning/BFL-022.xlsx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-023,tuning/BFL-023.docx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-024,tuning/BFL-024.xlsx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-025,tuning/BFL-025.docx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-026,tuning/BFL-026.xlsx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-027,tuning/BFL-027.docx,tuning,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-028,holdout/BFL-028.xlsx,holdout,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-029,holdout/BFL-029.docx,holdout,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
+BFL-030,holdout/BFL-030.xlsx,holdout,neutral,NO_MATCH,ALLOW,No case ID or supporting phrase
