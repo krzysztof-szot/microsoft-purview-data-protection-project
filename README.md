@@ -1,44 +1,105 @@
-# Microsoft Purview Data Protection and Governance
+<h1 align="center">Microsoft Purview Data Protection &amp; Governance Project</h1>
 
-Baltic Finance needs to share routine finance documents with a partner while keeping case files inside the organization. This SharePoint pilot tests whether Microsoft Purview can distinguish the two, restrict a guest's access to a confidential document, explain the decision, and restore the pre-change behavior after the policy is withdrawn.
+<p align="center"><strong>SharePoint Online · Information Protection · Data Loss Prevention · Data Lifecycle Management</strong></p>
 
-**Status:** Lab planning and subscription review in progress. The synthetic corpus and test protocol are ready. Tenant configuration and live Purview outcomes are tracked in the [test matrix](tests/test-matrix.csv).
+<p align="center">
+  <img alt="Project in progress" src="https://img.shields.io/badge/STATUS-IN%20PROGRESS-9A6700?style=for-the-badge">
+  <img alt="30 synthetic test fixtures" src="https://img.shields.io/badge/CORPUS-30%20FIXTURES-6f42c1?style=for-the-badge">
+  <img alt="24 defined validation checks" src="https://img.shields.io/badge/VALIDATION-24%20CHECKS%20DEFINED-0078D4?style=for-the-badge">
+</p>
 
-[Capstone](docs/capstone.md) · [Lab procedure](docs/lab-guide.md) · [License and readiness](docs/readiness.md) · [Test corpus](fixtures/README.md) · [Evidence index](evidence/README.md)
+<p align="center">
+  <img alt="Microsoft Purview" src="https://img.shields.io/badge/Microsoft-Purview-0078D4?style=flat-square">
+  <img alt="SharePoint Online" src="https://img.shields.io/badge/Microsoft-SharePoint%20Online-038387?style=flat-square">
+  <img alt="Data loss prevention" src="https://img.shields.io/badge/Purview-Data%20Loss%20Prevention-5C2D91?style=flat-square">
+  <img alt="PowerShell reporting" src="https://img.shields.io/badge/PowerShell-Classification%20Reporting-3973B9?style=flat-square">
+</p>
 
-## Control flow
+<p align="center">
+  <a href="#project-overview">Overview</a> ·
+  <a href="#target-architecture">Architecture</a> ·
+  <a href="#featured-implementation-evidence">Featured evidence</a> ·
+  <a href="#implementation-progress">Lab roadmap</a> ·
+  <a href="#supporting-documentation">Documentation</a> ·
+  <a href="#security-design-principles">Security principles</a>
+</p>
+
+**Baltic Finance** needs to share routine finance documents with a partner while keeping confidential case files inside the organization. This Microsoft Purview lab uses two SharePoint documents to trace the full decision. A partner should be able to open a routine document, lose access to a classified case file when DLP takes effect, and regain access to that test file after the policy is withdrawn.
+
+## Project Overview
+
+The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
+
+The [test matrix](tests/test-matrix.csv) records **2 PASS, 1 PENDING and 21 NOT_RUN**. Both passes cover tenant readiness. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
+
+## Explore the Project
+
+| Architecture | Implementation | Validation | Evidence |
+| :---: | :---: | :---: | :---: |
+| [View control flow](#target-architecture) | [Follow the lab guide](docs/lab-guide.md) | [Open the test matrix](tests/test-matrix.csv) | [Browse evidence](evidence/README.md) |
+| File classification, guest access and retention | Configuration, expected behavior, tests and rollback | Ground truth and recorded observations | Sanitized verification records |
+
+## Technologies and Concepts
+
+| Area | Lab scope |
+| --- | --- |
+| Information Protection | Custom sensitive information types (SITs), contextual matching and manual sensitivity labels |
+| SharePoint DLP | Pilot-site scope, simulation, external-only access restriction and neutral-file control |
+| Incident triage | Correlate the rule, file, action, actor and UTC timestamp with the observed access result |
+| Data Lifecycle Management | Retain-only label, deletion from the live library and independent verification of the preserved copy |
+| PowerShell reporting | Score classifier runs against labeled fixtures and report TP, FP, FN and TN once a run is complete |
+
+## Featured Implementation Evidence
+
+| Check | Recorded result | Evidence |
+| --- | --- | --- |
+| `LIC-04` · Purview portal access | The DLP Policies page opened and **Create policy** was visible | [Sanitized portal observation](evidence/README.md#dlp-portal-baseline) |
+| `LIC-05` · SharePoint workload | **SharePoint sites** was selectable in the custom DLP policy wizard | [Sanitized workload observation](evidence/README.md#dlp-portal-baseline) |
+
+The [capstone](docs/capstone.md) defines the evidence required for a policy match, guest denial, internal access, incident reconstruction and recovery.
+
+## Target Architecture
 
 ```mermaid
 flowchart LR
-    A["Finance author"] --> B["SharePoint pilot / Finance-Test"]
-    B --> C{"Purview DLP / custom SIT"}
-    C -->|"Neutral control"| D["Named guest opens document"]
-    C -->|"Finance case detected"| E["Guest denied / internal access verified"]
-    E --> F["Analyst correlates rule and file activity"]
-    F --> G["Policy disabled / same guest and link retested"]
-    A --> H["SharePoint pilot / Retention-Test"]
-    H --> I["Retain-only label / preservation verified after deletion"]
+    Author["Finance author"] --> Finance["SharePoint pilot · Finance-Test"]
+    Finance --> DLP{"Purview DLP · contextual SIT"}
+    DLP -->|"Neutral control"| Allow["Guest opens the approved file"]
+    DLP -->|"Confidential case"| Deny["Guest access restricted"]
+    Deny --> Triage["Analyst correlates rule and file activity"]
+    Triage --> Recovery["Disable pilot policy and retest original links"]
+    Author --> Retention["SharePoint pilot · Retention-Test"]
+    Retention --> Preserve["Verify retained copy after user deletion"]
 ```
 
-The first DLP rule uses the custom sensitive information type (SIT) independently of file sensitivity labels. A separate label-only test isolates that trigger if the tenant supports it. Retention is verified on a separate file copy.
+The primary DLP rule uses the custom SIT. If the tenant supports sensitivity-label conditions, a separate simulation tests the manual label as a trigger. The retention test uses a dedicated copy so it can be verified independently.
 
-## Validation
+## Implementation Progress
 
-| Question | Evidence required | Current status |
+| Stage | Validation milestone | Status |
 | --- | --- | --- |
-| Does context improve detection? | Two tuning runs and a final run on ten reserved files with TP, FP, FN and TN | NOT_RUN |
-| Can the partner open neutral content while a confidential file is restricted? | Simulation result, guest session, internal control and rule attribution | NOT_RUN |
-| Can an analyst reconstruct the event? | UTC time, file ID, actor alias, action, rule and observed outcome | NOT_RUN |
-| Is a retain-only copy preserved after user deletion? | Label state, deletion and independently verified retained copy | NOT_RUN |
-| Did withdrawal restore guest access? | Scoped policy state and a repeat test with the original guest and link | NOT_RUN |
+| 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | In progress |
+| 1 · Classification and labeling | Compare a pattern-only SIT and a contextual SIT on 20 tuning files. Test the frozen rule on 10 reserved files | `NOT_RUN` |
+| 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | `NOT_RUN` |
+| 3 · Lifecycle controls | Verify preservation after deletion. Exercise service-side auto-labeling if the license permits | `NOT_RUN` |
+| 4 · Capstone and closure | Repeat the allow and deny cases, then verify recovery after policy withdrawal | `NOT_RUN` |
 
-## Reproduce the lab
+## Supporting Documentation
 
-1. Confirm licensed users, portal permissions, subscription dates and access to a controlled guest identity in [readiness](docs/readiness.md).
-2. Follow the [lab procedure](docs/lab-guide.md) and use the [manifest](fixtures/manifest.csv) to select fixtures for each run.
-3. Record observations and evidence in the [test matrix](tests/test-matrix.csv) and [classification runs](tests/classification-results.csv). Use the [PowerShell scorer](scripts/Measure-SitClassification.ps1) to produce the confusion matrices.
-4. Document effective access, telemetry and rollback in the [capstone](docs/capstone.md). Follow the [incident runbook](docs/runbook.md) when investigating the DLP event.
+| Resource | Contents |
+| --- | --- |
+| [Tenant readiness](docs/readiness.md) | Licenses, roles and pre-deployment checks |
+| [Lab guide](docs/lab-guide.md) | Configuration scope, expected behavior, evidence and rollback |
+| [Synthetic corpus](fixtures/README.md) and [manifest](fixtures/manifest.csv) | 12 finance cases, 8 near matches and 10 neutral controls |
+| [Classification results](tests/classification-results.csv) and [PowerShell scorer](scripts/Measure-SitClassification.ps1) | Per-file observations and reproducible confusion matrices |
+| [Capstone](docs/capstone.md) and [triage runbook](docs/runbook.md) | Guest access timeline, policy attribution and verified withdrawal criteria |
 
-## Portfolio context
+## Security Design Principles
 
-The pilot uses the same fictional organization as the SharePoint administration, hybrid security and IAM labs. Its scope is document protection and lifecycle validation inside Microsoft 365. [Microsoft 365 administration](https://github.com/krzysztof-szot/m365-administration-support-project) · [Hybrid security](https://github.com/krzysztof-szot/hybrid-enterprise-security-project) · [IAM automation](https://github.com/krzysztof-szot/iam-powershell-automation-project) · [Entra identity and access](https://github.com/krzysztof-szot/entra-identity-access-project)
+- Scope policy changes to the dedicated SharePoint pilot site and use named, authenticated links for the controlled guest.
+- Record the baseline, simulate the rule and compare access with a neutral control before attributing a denial to DLP.
+- Publish synthetic fixtures and sanitized evidence. Keep guest links and raw tenant exports private.
+
+## Related Portfolio Projects
+
+[Microsoft 365 Administration & Support](https://github.com/krzysztof-szot/m365-administration-support-project) · [Hybrid Enterprise Security](https://github.com/krzysztof-szot/hybrid-enterprise-security-project) · [IAM PowerShell Automation](https://github.com/krzysztof-szot/iam-powershell-automation-project) · [Microsoft Entra Identity & Access](https://github.com/krzysztof-szot/entra-identity-access-project)
