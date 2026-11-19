@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **14 PASS, 1 PENDING and 9 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **15 PASS and 9 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -65,6 +65,7 @@ The [test matrix](tests/test-matrix.csv) records **14 PASS, 1 PENDING and 9 NOT_
 | `LBL-01` and `LBL-02` · Manual label persistence | SharePoint displayed the assigned sensitivity label for each test workbook | [Stage 01 screenshot 10](evidence/stage-01/10-LBL-01-LBL-02-sharepoint-sensitivity.png) |
 | `SIM-01` · DLP simulation | The pilot site scan completed with one match across 13 files. The match was `BFL-005.docx` | [Simulation mode](evidence/stage-02/01-SIM-01-dlp-policy-in-simulation.png) · [Stage 02 screenshot 03](evidence/stage-02/03-SIM-01-BFL-005-match.png) |
 | `DLP-01` · Guest baseline before enforcement | The same controlled guest opened both fixtures in view-only mode | [Stage 02 screenshot 02](evidence/stage-02/02-DLP-01-guest-view-BFL-005.png) |
+| `DLP-02` · Guest access after activation | The guest received `403 Forbidden` for `BFL-005.docx` and opened `BFL-021.docx` in view-only mode | [Stage 02 screenshot 04](evidence/stage-02/04-DLP-02-guest-denied-BFL-005.png) |
 
 The [capstone](docs/capstone.md) defines the evidence required for a policy match, guest denial, internal access, incident reconstruction and recovery.
 
