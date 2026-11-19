@@ -137,7 +137,11 @@ The next submission returned `InvalidBlockAccessActionException` with `NotifyUse
 
 ### Simulation mode
 
-[Stage 02 screenshot 01](stage-02/01-SIM-01-dlp-policy-in-simulation.png) shows `BFL SharePoint External Access` in **In simulation without notifications** after successful submission. The policy sync status was **Sync in progress** at capture time. `SIM-01` remains pending file evaluation. The [guest baseline](#guest-access-before-enforcement) confirmed named view-only access for both files.
+[Stage 02 screenshot 01](stage-02/01-SIM-01-dlp-policy-in-simulation.png) shows `BFL SharePoint External Access` in **In simulation without notifications** after successful submission. The policy sync status was **Sync in progress** at capture time. The [guest baseline](#guest-access-before-enforcement) confirmed named view-only access for both files.
+
+### Simulation result
+
+**SIM-01 · PASS.** The pilot SharePoint site scan completed at 100%. Purview reported 13 files scanned, 1 of 1 sites scanned, and 0 sites that failed to scan. `BFL-005.docx` was the only match. `BFL-021.docx` had named guest access in the same pilot site, so its no-match outcome is inferred from the completed site scan and the sole reported match. [Stage 02 screenshot 03](stage-02/03-SIM-01-BFL-005-match.png) records the dashboard totals and the matched file.
 
 ### Guest access before enforcement
 
