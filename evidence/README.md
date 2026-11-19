@@ -38,17 +38,23 @@ The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no
 
 ## Contextual sensitive information type
 
-[05 · v2 pattern settings](stage-01/05-SIT-02-v2-pattern.png) shows the `BFL Finance Case v2` pattern at High confidence. It reuses the primary regex `BFLCaseIdRegex` and adds the supporting keyword list `BFLFinanceCaseContext` with a 50-character proximity. The operator configured the list with the case-insensitive phrase `synthetic finance case`. The operator saved the SIT and began the `SIT-02` tuning run.
+### Initial attempt and readback
+
+[05 · Initial v2 draft](stage-01/05-SIT-02-v2-pattern.png) shows the intended High-confidence pattern before the operator finished saving it. The draft included the primary regex `BFLCaseIdRegex`, the supporting list `BFLFinanceCaseContext` and a 50-character proximity.
+
+Readback confirmed one High-confidence pattern. The saved primary element was the keyword list `BFLFinanceCaseContext`. The proximity field and supporting-elements list were empty. The operator confirmed that the intended changes were not saved. This persisted keyword-only pattern explains the initial test outcomes below.
+
+A fresh 20-file v2 run will begin after the intended pattern is saved and verified by readback. The initial observations remain evidence of the configuration error.
 
 ### Same-file comparison
 
-| Fixture | v1 baseline | v2 with context |
+| Fixture | v1 baseline | Initial saved v2 |
 | --- | --- | --- |
 | `BFL-014.xlsx` | `MATCH` with one unique identifier and no supporting element. [04 · v1 result](stage-01/04-SIT-01-v1-BFL-014.png) | `NO_MATCH`. [06 · v2 result](stage-01/06-SIT-02-v2-BFL-014.png) |
 
-The lab operator selected `BFL Finance Case v2` for the second test. The result screen confirms the fixture and no-match message. This is the first observed correction on the tuning set. The remaining v2 cases include positive controls to check for missed finance cases.
+The lab operator selected `BFL Finance Case v2` as initially saved for the second test. The result screen confirms the fixture and no-match message.
 
-### Contextual positive control
+### Positive control on initial v2
 
 [07 · BFL-006 match results](stage-01/07-SIT-02-v2-BFL-006.png) confirms one unique match for `BFL Finance Case v2` at each confidence level. Purview displayed `synthetic finance case` under **Matches** and `None` under **Supporting elements**. This is a true positive at file level. The malformed-ID fixture `BFL-016.xlsx` provides a separate check of whether the phrase can trigger a match without a valid identifier.
 
@@ -60,7 +66,7 @@ The [diagnostic workbook](../fixtures/diagnostics/phrase-only.xlsx) keeps the sa
 
 ### Phrase-only diagnostic
 
-[08 · Phrase-only v2 result](stage-01/08-SIT-02-v2-phrase-only.png) shows that `BFL Finance Case v2` returned `MATCH` on `phrase-only.xlsx`. The result displayed one unique match at each confidence level with `synthetic finance case` under **Matches** and `None` under **Supporting elements**. The workbook contains the phrase and no case identifier. The observed SIT test therefore accepts a file that fails the required ID-and-context condition. The next diagnostic step is to inspect the saved pattern and its elements. Explain the behavior before selecting a classifier for DLP.
+[08 · Phrase-only v2 result](stage-01/08-SIT-02-v2-phrase-only.png) shows that `BFL Finance Case v2` returned `MATCH` on `phrase-only.xlsx`. The result displayed one unique match at each confidence level with `synthetic finance case` under **Matches** and `None` under **Supporting elements**. The workbook contains the phrase and no case identifier. This result is consistent with the saved keyword list functioning as the primary element.
 
 ## Captures to collect
 
