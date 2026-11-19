@@ -1,6 +1,6 @@
 # Evidence index
 
-Publish evidence after each live test is observed. Use repo-relative paths in the [test matrix](../tests/test-matrix.csv). Keep raw exports and share links in private storage.
+Publish evidence after each live test is observed. Use repo-relative paths in the [test matrix](../tests/test-matrix.csv). Keep raw exports and share links in private storage. Number screenshots from `01` within each stage directory.
 
 ## DLP portal baseline
 
@@ -16,7 +16,9 @@ The operator confirmed that `Finance-Test` contains the four synthetic pilot fil
 
 The initial pilot-site scope was **Only people in your organization**. The operator verified the controlled guest in Microsoft Entra ID and confirmed the stored pilot-site settings **Existing guests only**, **Specific people**, and **View**. See the [readiness record](../docs/readiness.md#sharepoint-sharing-baseline) for the before-and-after settings.
 
-The first recipient lookup for `ENV-01` displayed a directory group. The operator is verifying the controlled guest by its original external email address before sending the named link.
+### Named-guest access baseline
+
+The first recipient lookup for `ENV-01` displayed a directory group. The operator resolved the intended guest by entering its original external email address and confirmed the named share. The operator then supplied [Stage 0 screenshot 01](stage-00/01-ENV-01-guest-view-BFL-021.png) for the separate guest session. It shows `BFL-021.docx` open in Word for the web with the synthetic meeting agenda visible. This establishes the neutral-file access baseline before DLP enforcement.
 
 | File in Finance-Test | Purpose |
 | --- | --- |

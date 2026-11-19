@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **5 PASS, 3 PENDING and 16 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **6 PASS, 2 PENDING and 16 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -55,6 +55,7 @@ The [test matrix](tests/test-matrix.csv) records **5 PASS, 3 PENDING and 16 NOT_
 | --- | --- | --- |
 | `LIC-04` · Purview portal access | The DLP Policies page opened and **Create policy** was visible | [Sanitized portal observation](evidence/README.md#dlp-portal-baseline) |
 | `LIC-05` · SharePoint workload | **SharePoint sites** was selectable in the custom DLP policy wizard | [Sanitized workload observation](evidence/README.md#dlp-portal-baseline) |
+| `ENV-01` · Guest baseline | The controlled guest opened the neutral document in Word for the web through named-file access | [Stage 0 screenshot 01](evidence/stage-00/01-ENV-01-guest-view-BFL-021.png) |
 | `SIT-01` · Classifier setup | Created `BFL Finance Case v1` with the baseline regex at High confidence | [Baseline SIT configuration](evidence/README.md#baseline-sensitive-information-type) |
 | `SIT-01` · Baseline evaluation | 20 of 20 tuning samples evaluated. 8 true positives, 3 false positives, 0 false negatives and 9 true negatives | [Tuning results](evidence/README.md#baseline-tuning-observations) · [Screenshot 04](evidence/stage-01/04-SIT-01-v1-BFL-014.png) |
 | `SIT-02` · Configuration readback | The initial v2 draft was not saved as intended. The stored keyword-only pattern explained the diagnostic match and prompted a fresh evaluation | [Readback and initial observations](evidence/README.md#contextual-sensitive-information-type) |
