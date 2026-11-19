@@ -55,6 +55,7 @@ The [test matrix](tests/test-matrix.csv) records **2 PASS, 1 PENDING and 21 NOT_
 | --- | --- | --- |
 | `LIC-04` · Purview portal access | The DLP Policies page opened and **Create policy** was visible | [Sanitized portal observation](evidence/README.md#dlp-portal-baseline) |
 | `LIC-05` · SharePoint workload | **SharePoint sites** was selectable in the custom DLP policy wizard | [Sanitized workload observation](evidence/README.md#dlp-portal-baseline) |
+| `SIT-01` · Classifier setup | Created `BFL Finance Case v1` with the baseline regex at High confidence. File-level evaluation is pending | [Baseline SIT configuration](evidence/README.md#baseline-sensitive-information-type) |
 
 The [capstone](docs/capstone.md) defines the evidence required for a policy match, guest denial, internal access, incident reconstruction and recovery.
 
@@ -79,7 +80,7 @@ The primary DLP rule uses the custom SIT. If the tenant supports sensitivity-lab
 | Stage | Validation milestone | Status |
 | --- | --- | --- |
 | 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | In progress |
-| 1 · Classification and labeling | Compare a pattern-only SIT and a contextual SIT on 20 tuning files. Test the frozen rule on 10 reserved files | `NOT_RUN` |
+| 1 · Classification and labeling | Compare a pattern-only SIT and a contextual SIT on 20 tuning files. Test the frozen rule on 10 reserved files | In progress |
 | 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | `NOT_RUN` |
 | 3 · Lifecycle controls | Verify preservation after deletion. Exercise service-side auto-labeling if the license permits | `NOT_RUN` |
 | 4 · Capstone and closure | Repeat the allow and deny cases, then verify recovery after policy withdrawal | `NOT_RUN` |

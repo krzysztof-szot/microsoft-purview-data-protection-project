@@ -8,6 +8,15 @@ Publish evidence after each live test is observed. Use repo-relative paths in th
 
 **LIC-05 · 18 November 2026.** The lab operator confirmed that **SharePoint sites** is selectable in the custom DLP policy wizard under **Enterprise applications & devices**. This verifies availability in the wizard. Pilot scoping and enforcement have their own tests.
 
+## Baseline sensitive information type
+
+The lab operator configured `BFL Finance Case v1` and observed the portal's creation confirmation. The configuration captures show what was saved. File-level matching will be recorded separately under `SIT-01`.
+
+| Screenshot | What it shows |
+| --- | --- |
+| [01 · Regular expression](stage-01/01-SIT-01-v1-regex.png) | `BFLCaseIdRegex` has one capturing group for the six-digit case identifier. It uses String match with no validators |
+| [02 · Pattern settings](stage-01/02-SIT-01-v1-pattern.png) | High confidence, 50-character proximity, and a single primary element with no supporting elements or additional checks |
+
 ## Captures to collect
 
 | Capture | What to show |
