@@ -2,6 +2,10 @@
 
 Publish evidence after each live test is observed. Use repo-relative paths in the [test matrix](../tests/test-matrix.csv). Keep raw exports and share links in private storage. Number screenshots from `01` within each stage directory.
 
+## Auto-labeling wizard scope
+
+**LIC-03.** [Stage 0 screenshot 02](stage-00/02-LIC-03-auto-labeling-sharepoint-scope.png) shows **Specific sites and adaptive scopes** with a single selected item, `BFL-Purview-Pilot`. It verifies selection of the pilot SharePoint site in the auto-labeling wizard. The pilot user's add-on assignment is pending verification.
+
 ## DLP portal baseline
 
 **LIC-04 · 18 November 2026.** The supplied capture shows the lab operator on Microsoft Purview → Data Loss Prevention → Policies with the **Create policy** command visible. The visible default policies are for Copilot interactions, Teams and devices. Their names and modes support a baseline inventory. Read the policy details to establish their actual locations before the pilot. This observation verifies page visibility. The original portal capture remains private.
