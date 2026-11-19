@@ -25,7 +25,7 @@ This readback satisfies `LIC-02`. Site access and effective file permissions are
 
 ## Advanced labeling entitlement check
 
-The Microsoft Customer Agreement prerequisites list Business Premium as a qualifying base license for E5 Information Protection and Governance. Microsoft's service description includes service-side automatic sensitivity labeling in the add-on. The operator selected `BFL-Purview-Pilot` as the single SharePoint site in the auto-labeling wizard. The [Stage 0 capture](../evidence/stage-00/02-LIC-03-auto-labeling-sharepoint-scope.png) verifies the selectable scope. The pilot user's add-on assignment is pending verification. [Product Terms for Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/en-US/productoffering/MicrosoftPurview/MCA#LicensePrerequisites) · [Purview service description](https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling)
+The Microsoft Customer Agreement prerequisites list Business Premium as a qualifying base license for E5 Information Protection and Governance. Microsoft's service description includes service-side automatic sensitivity labeling in the add-on. The operator selected `BFL-Purview-Pilot` as the single SharePoint site in the auto-labeling wizard. The [Stage 0 capture](../evidence/stage-00/02-LIC-03-auto-labeling-sharepoint-scope.png) verifies the selectable scope. The operator confirmed that `PILOT` has both Business Premium with Copilot and E5 Information Protection and Governance assigned in **Licenses and apps**. [Product Terms for Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/en-US/productoffering/MicrosoftPurview/MCA#LicensePrerequisites) · [Purview service description](https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling)
 
 ## SharePoint sharing baseline
 
@@ -66,5 +66,5 @@ Move any milestone tied to asynchronous processing according to service observat
 ## Readiness decision
 
 - **Core SharePoint pilot:** Base SKU, SharePoint access and guest identity identified. Confirm per-user service plans, product details and policy permissions.
-- **Automatic labeling readiness (`LIC-03`):** `PENDING` until the pilot user's add-on assignment is confirmed. File-level automatic labeling is validated in Stage 3.
+- **Automatic labeling readiness (`LIC-03`):** `PASS`. The pilot add-on assignment and SharePoint wizard scope were verified. File-level automatic labeling is planned for Stage 3.
 - **Next action:** Finish the read-only checks and record the relevant outcomes in [the test matrix](../tests/test-matrix.csv).

@@ -4,7 +4,7 @@ Publish evidence after each live test is observed. Use repo-relative paths in th
 
 ## Auto-labeling wizard scope
 
-**LIC-03.** [Stage 0 screenshot 02](stage-00/02-LIC-03-auto-labeling-sharepoint-scope.png) shows **Specific sites and adaptive scopes** with a single selected item, `BFL-Purview-Pilot`. It verifies selection of the pilot SharePoint site in the auto-labeling wizard. The pilot user's add-on assignment is pending verification.
+**LIC-03.** [Stage 0 screenshot 02](stage-00/02-LIC-03-auto-labeling-sharepoint-scope.png) shows **Specific sites and adaptive scopes** with a single selected item, `BFL-Purview-Pilot`. It verifies selection of the pilot SharePoint site in the auto-labeling wizard. The operator separately confirmed the E5 Information Protection and Governance add-on assignment to `PILOT` in **Licenses and apps**.
 
 ## DLP portal baseline
 
