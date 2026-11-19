@@ -39,13 +39,13 @@ v2_tuning,BFL-024,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator 
 v2_tuning,BFL-025,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-026,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-027,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
-v2_holdout,BFL-009,NOT_RUN,,,
-v2_holdout,BFL-010,NOT_RUN,,,
-v2_holdout,BFL-011,NOT_RUN,,,
-v2_holdout,BFL-012,NOT_RUN,,,
-v2_holdout,BFL-018,NOT_RUN,,,
-v2_holdout,BFL-019,NOT_RUN,,,
-v2_holdout,BFL-020,NOT_RUN,,,
-v2_holdout,BFL-028,NOT_RUN,,,
-v2_holdout,BFL-029,NOT_RUN,,,
-v2_holdout,BFL-030,NOT_RUN,,,
+v2_holdout,BFL-009,MATCH,,evidence/README.md#holdout-evaluation,Operator reported a match on the frozen v2 pattern.
+v2_holdout,BFL-010,MATCH,,evidence/README.md#holdout-evaluation,Operator reported a match on the frozen v2 pattern.
+v2_holdout,BFL-011,MATCH,,evidence/README.md#holdout-evaluation,Operator reported a match on the frozen v2 pattern.
+v2_holdout,BFL-012,MATCH,,evidence/README.md#holdout-evaluation,Operator reported a match on the frozen v2 pattern.
+v2_holdout,BFL-018,NO_MATCH,,evidence/README.md#holdout-evaluation,Operator reported no match on the frozen v2 pattern.
+v2_holdout,BFL-019,NO_MATCH,,evidence/README.md#holdout-evaluation,Operator reported no match on the frozen v2 pattern.
+v2_holdout,BFL-020,NO_MATCH,,evidence/README.md#holdout-evaluation,Operator reported no match on the frozen v2 pattern.
+v2_holdout,BFL-028,NO_MATCH,,evidence/README.md#holdout-evaluation,Operator reported no match on the frozen v2 pattern.
+v2_holdout,BFL-029,NO_MATCH,,evidence/README.md#holdout-evaluation,Operator reported no match on the frozen v2 pattern.
+v2_holdout,BFL-030,NO_MATCH,,evidence/README.md#holdout-evaluation,Operator reported no match on the frozen v2 pattern.

@@ -84,6 +84,12 @@ The remaining seven neutral fixtures returned `NO_MATCH`, completing all 20 tria
 
 Use the saved `BFL Finance Case v2` pattern with High confidence. The primary element is `BFLCaseIdRegex`. The supporting list `BFLFinanceCaseContext` contains the case-insensitive string `synthetic finance case` with a 50-character proximity. The separate 10-file holdout evaluates this configuration once before any additional tuning.
 
+### Holdout evaluation
+
+The operator reported results for all ten held-out files using the frozen `BFL Finance Case v2` pattern. All four finance cases matched, including the DOCX and XLSX examples where the supporting phrase precedes the ID. The no-phrase, wrong-prefix and distant-phrase controls returned `NO_MATCH`, as did the three neutral files.
+
+The holdout result was 4 true positives, 0 false positives, 0 false negatives and 6 true negatives. See the [per-file register](../tests/classification-results.csv) and the [confusion matrices](../docs/capstone.md#classifier-comparison).
+
 ## Captures to collect
 
 | Capture | What to show |
