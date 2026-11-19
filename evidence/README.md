@@ -26,7 +26,7 @@ The lab operator configured `BFL Finance Case v1` and observed the portal's crea
 | `BFL-014.xlsx` | One unique identifier `BFLCASE-254834` shown at Low, Medium and High | False positive on an identifier with unrelated context. [04 · Match results](stage-01/04-SIT-01-v1-BFL-014.png) |
 | `BFL-026.xlsx` | No sensitive information detected | True negative on the neutral control. Result reported by the lab operator |
 
-Both matches reported no supporting elements. See the [per-file register](../tests/classification-results.csv) for tuning coverage.
+All nine tuning workbooks were evaluated. Against the manifest, the workbook subset yielded 4 true positives, 1 false positive, 0 false negatives and 4 true negatives. Purview reported no supporting elements for the matched workbooks. The seven-digit identifier in `BFL-016.xlsx` returned no match. See individual operator-reported results in the [per-file register](../tests/classification-results.csv).
 
 ## Captures to collect
 

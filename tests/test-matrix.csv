@@ -5,7 +5,7 @@ LIC-03,Readiness,Verify IPG benefit prerequisites and service-side auto-labeling
 LIC-04,Readiness,Open Data Loss Prevention Policies,Policies page and Create policy command visible,Policies page and Create policy visible in operator capture.,PASS,evidence/README.md#dlp-portal-baseline,
 LIC-05,Readiness,Check custom DLP policy Locations,SharePoint sites selectable in the custom-policy wizard,Lab operator confirmed SharePoint sites is selectable.,PASS,evidence/README.md#dlp-portal-baseline,Site scope and enforcement have separate tests.
 ENV-01,Pilot boundary,GUEST opens BFL-021.docx,Named guest opens neutral file under baseline SharePoint permissions,,NOT_RUN,,
-SIT-01,Classification,Run v1 on 20 tuning fixtures,Result for every file and confusion matrix computed,Positive and neutral controls behaved as expected. BFL-014 matched despite unrelated context.,PENDING,evidence/README.md#baseline-tuning-observations,3 of 20 tuning files recorded.
+SIT-01,Classification,Run v1 on 20 tuning fixtures,Result for every file and confusion matrix computed,All nine tuning workbooks evaluated. Workbook subset results were 4 TP and 1 FP and 0 FN and 4 TN.,PENDING,evidence/README.md#baseline-tuning-observations,9 of 20 tuning files recorded. DOCX results remain to be collected.
 SIT-02,Classification,Run v2 on 20 tuning fixtures,Result for every file. Compare with v1 and explain remaining misclassifications.,,NOT_RUN,,
 SIT-03,Classification,Run frozen v2 on ten holdout fixtures,One observed evaluation and confusion matrix for reserved corpus,,NOT_RUN,,
 LBL-01,Sensitivity labeling,Apply BFL Finance Confidential to BFL-022.xlsx,Manual label persists in SharePoint or reopened Office file,,NOT_RUN,,
