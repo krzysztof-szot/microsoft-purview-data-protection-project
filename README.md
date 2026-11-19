@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **3 PASS, 1 PENDING and 20 NOT_RUN**. The baseline classifier run is complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **3 PASS, 2 PENDING and 19 NOT_RUN**. The baseline classifier run is complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -57,6 +57,7 @@ The [test matrix](tests/test-matrix.csv) records **3 PASS, 1 PENDING and 20 NOT_
 | `LIC-05` · SharePoint workload | **SharePoint sites** was selectable in the custom DLP policy wizard | [Sanitized workload observation](evidence/README.md#dlp-portal-baseline) |
 | `SIT-01` · Classifier setup | Created `BFL Finance Case v1` with the baseline regex at High confidence | [Baseline SIT configuration](evidence/README.md#baseline-sensitive-information-type) |
 | `SIT-01` · Baseline evaluation | 20 of 20 tuning samples evaluated. 8 true positives, 3 false positives, 0 false negatives and 9 true negatives | [Tuning results](evidence/README.md#baseline-tuning-observations) · [Screenshot 04](evidence/stage-01/04-SIT-01-v1-BFL-014.png) |
+| `SIT-02` · Same-file comparison | `BFL-014.xlsx` changed from a false positive in v1 to no match in v2 | [Side-by-side result](evidence/README.md#same-file-comparison) |
 
 The [capstone](docs/capstone.md) defines the evidence required for a policy match, guest denial, internal access, incident reconstruction and recovery.
 

@@ -28,7 +28,7 @@ v2_tuning,BFL-006,NOT_RUN,,,
 v2_tuning,BFL-007,NOT_RUN,,,
 v2_tuning,BFL-008,NOT_RUN,,,
 v2_tuning,BFL-013,NOT_RUN,,,
-v2_tuning,BFL-014,NOT_RUN,,,
+v2_tuning,BFL-014,NO_MATCH,,evidence/stage-01/06-SIT-02-v2-BFL-014.png,Operator tested the saved v2 SIT. Portal reported no sensitive information for the fixture.
 v2_tuning,BFL-015,NOT_RUN,,,
 v2_tuning,BFL-016,NOT_RUN,,,
 v2_tuning,BFL-017,NOT_RUN,,,

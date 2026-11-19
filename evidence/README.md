@@ -38,7 +38,15 @@ The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no
 
 ## Contextual sensitive information type
 
-[05 · v2 pattern settings](stage-01/05-SIT-02-v2-pattern.png) shows the proposed `BFL Finance Case v2` pattern at High confidence. It reuses the primary regex `BFLCaseIdRegex` and adds the supporting keyword list `BFLFinanceCaseContext` with a 50-character proximity. The operator configured the list with the case-insensitive phrase `synthetic finance case`. File-level outcomes will be recorded during `SIT-02`.
+[05 · v2 pattern settings](stage-01/05-SIT-02-v2-pattern.png) shows the `BFL Finance Case v2` pattern at High confidence. It reuses the primary regex `BFLCaseIdRegex` and adds the supporting keyword list `BFLFinanceCaseContext` with a 50-character proximity. The operator configured the list with the case-insensitive phrase `synthetic finance case`. The operator saved the SIT and began the `SIT-02` tuning run.
+
+### Same-file comparison
+
+| Fixture | v1 baseline | v2 with context |
+| --- | --- | --- |
+| `BFL-014.xlsx` | `MATCH` with one unique identifier and no supporting element. [04 · v1 result](stage-01/04-SIT-01-v1-BFL-014.png) | `NO_MATCH`. [06 · v2 result](stage-01/06-SIT-02-v2-BFL-014.png) |
+
+The lab operator selected `BFL Finance Case v2` for the second test. The result screen confirms the fixture and no-match message. This is the first observed correction on the tuning set. The remaining v2 cases include positive controls to check for missed finance cases.
 
 ## Captures to collect
 
