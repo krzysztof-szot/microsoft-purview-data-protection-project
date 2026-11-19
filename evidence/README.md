@@ -24,8 +24,9 @@ The lab operator configured `BFL Finance Case v1` and observed the portal's crea
 | --- | --- | --- |
 | `BFL-006.xlsx` | One unique identifier `BFLCASE-249898` shown at Low, Medium and High | True positive on known finance-case content. Result reported by the lab operator |
 | `BFL-014.xlsx` | One unique identifier `BFLCASE-254834` shown at Low, Medium and High | False positive on an identifier with unrelated context. [04 · Match results](stage-01/04-SIT-01-v1-BFL-014.png) |
+| `BFL-026.xlsx` | No sensitive information detected | True negative on the neutral control. Result reported by the lab operator |
 
-Both results reported no supporting elements. See the [per-file register](../tests/classification-results.csv) for tuning coverage.
+Both matches reported no supporting elements. See the [per-file register](../tests/classification-results.csv) for tuning coverage.
 
 ## Captures to collect
 

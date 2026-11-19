@@ -17,7 +17,7 @@ v1_tuning,BFL-022,NOT_RUN,,,
 v1_tuning,BFL-023,NOT_RUN,,,
 v1_tuning,BFL-024,NOT_RUN,,,
 v1_tuning,BFL-025,NOT_RUN,,,
-v1_tuning,BFL-026,NOT_RUN,,,
+v1_tuning,BFL-026,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-027,NOT_RUN,,,
 v2_tuning,BFL-001,NOT_RUN,,,
 v2_tuning,BFL-002,NOT_RUN,,,
