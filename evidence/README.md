@@ -12,6 +12,15 @@ Publish evidence after each live test is observed. Use repo-relative paths in th
 
 The lab operator reported creating `BFL-Purview-Pilot` using the Team site template without a Microsoft 365 group. The site is the scope for the configuration and file-level checks in the [pilot procedure](../docs/lab-guide.md#1-establish-the-pilot-boundary).
 
+The operator confirmed that `Finance-Test` contains the four synthetic pilot files and that the empty `Retention-Test` library is available for the later retention exercise.
+
+| File in Finance-Test | Purpose |
+| --- | --- |
+| `BFL-005.docx` | SIT-positive fixture for the DLP run |
+| `BFL-021.docx` | Neutral fixture for the guest baseline and DLP control |
+| `BFL-022.xlsx` | Manual `BFL Finance Confidential` label test |
+| `BFL-024.xlsx` | Manual `BFL Internal` label test |
+
 ## Baseline sensitive information type
 
 The lab operator configured `BFL Finance Case v1` and observed the portal's creation confirmation. The configuration captures show what was saved. File-level matching is tracked separately under `SIT-01`.
