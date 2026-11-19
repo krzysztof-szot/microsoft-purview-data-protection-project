@@ -12,6 +12,10 @@ The lab operator confirmed SharePoint Online access, a controlled guest identity
 
 The lab operator reached **Data Loss Prevention → Policies** and confirmed that **SharePoint sites** is selectable in the custom-policy wizard. Deployment permissions and effective policy behavior will be tested during the pilot. See the [sanitized portal observation](../evidence/README.md#dlp-portal-baseline).
 
+## Pilot entitlement check
+
+On 19 November 2026, the lab operator reported that `PILOT` has Microsoft 365 Business Premium with Copilot and belongs to the label publication group. The enabled SharePoint service plans for `PILOT` and `CONTROL` are still to be verified. The SharePoint external sharing settings must be read at the tenant and pilot-site levels before the guest baseline.
+
 ## Checks before policy changes
 
 | Check | Read-only verification | Record |
