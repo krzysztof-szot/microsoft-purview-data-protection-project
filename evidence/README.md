@@ -125,9 +125,9 @@ The operator published both labels in `BFL Purview Pilot Labels` with `BFL-Purvi
 
 ### Manual label persistence
 
-**LBL-01 · PASS.** The operator's SharePoint readback showed `BFL Finance Confidential` in the **Sensitivity** column for `BFL-022.xlsx` in `Finance-Test` after the manual labeling step. The source capture contains account display names and is retained privately.
+**LBL-01 · PASS.** The **Sensitivity** column in `Finance-Test` shows `BFL Finance Confidential` for `BFL-022.xlsx` after manual labeling.
 
-`LBL-02` checks whether `BFL Internal` persists on `BFL-024.xlsx`. The evidence capture will show both saved labels in `Finance-Test` with the account column hidden.
+**LBL-02 · PASS.** The same library shows `BFL Internal` for `BFL-024.xlsx` after manual labeling. [Stage 01 screenshot 10](stage-01/10-LBL-01-LBL-02-sharepoint-sensitivity.png) captures both saved labels with **Modified By** hidden.
 
 ## Captures to collect
 
@@ -135,7 +135,6 @@ The operator published both labels in `BFL Purview Pilot Labels` with `BFL-Purvi
 | --- | --- |
 | ENV-01 | Named guest opening the neutral fixture in a separate session |
 | SIT-01 to SIT-03 | Rule definitions and sanitized per-file classifier outcomes |
-| LBL-01 and LBL-02 | Both workbook names and saved labels in the SharePoint **Sensitivity** column |
 | SIM-01 | Pilot-site scope, simulation mode and matched fixture |
 | DLP-02 and DLP-03 | Guest allow/deny and an ordinary internal user's access |
 | LOG-01 | Rule, file, workload and UTC time in the cited signal |
