@@ -74,6 +74,8 @@ After saving the corrected v2 pattern, the operator retested the same `phrase-on
 
 [09 · BFL-006 positive retest](stage-01/09-SIT-02-v2-retest-BFL-006.png) shows a single unique match for `BFL Finance Case v2` at each confidence level. **Matches** shows `BFLCASE-249898` and **Supporting elements** shows `synthetic finance case`. The same saved configuration returned `NO_MATCH` on the phrase-only diagnostic. This begins the corrected 20-file tuning run.
 
+The operator reported `NO_MATCH` on all five near-match fixtures in the corrected tuning run. `BFL-013`, `BFL-014` and `BFL-017` had triggered v1. The five- and seven-digit controls `BFL-015` and `BFL-016` also returned `NO_MATCH`, including the seven-digit example that had triggered the initial keyword-only v2 pattern.
+
 ## Captures to collect
 
 | Capture | What to show |

@@ -27,11 +27,11 @@ v2_tuning,BFL-005,NOT_RUN,,,
 v2_tuning,BFL-006,MATCH,,evidence/stage-01/09-SIT-02-v2-retest-BFL-006.png,One unique match at Low Medium and High. Matches displayed BFLCASE-249898 and Supporting elements displayed synthetic finance case.
 v2_tuning,BFL-007,NOT_RUN,,,
 v2_tuning,BFL-008,NOT_RUN,,,
-v2_tuning,BFL-013,NOT_RUN,,,
-v2_tuning,BFL-014,NOT_RUN,,,
-v2_tuning,BFL-015,NOT_RUN,,,
-v2_tuning,BFL-016,NOT_RUN,,,
-v2_tuning,BFL-017,NOT_RUN,,,
+v2_tuning,BFL-013,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-014,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-015,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-016,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-017,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-021,NOT_RUN,,,
 v2_tuning,BFL-022,NOT_RUN,,,
 v2_tuning,BFL-023,NOT_RUN,,,
