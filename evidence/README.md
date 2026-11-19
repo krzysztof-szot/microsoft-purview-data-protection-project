@@ -137,7 +137,11 @@ The next submission returned `InvalidBlockAccessActionException` with `NotifyUse
 
 ### Simulation mode
 
-[Stage 02 screenshot 01](stage-02/01-SIM-01-dlp-policy-in-simulation.png) shows `BFL SharePoint External Access` in **In simulation without notifications** after successful submission. The policy sync status was **Sync in progress** at capture time. `SIM-01` remains pending evaluation of both files with named guest access.
+[Stage 02 screenshot 01](stage-02/01-SIM-01-dlp-policy-in-simulation.png) shows `BFL SharePoint External Access` in **In simulation without notifications** after successful submission. The policy sync status was **Sync in progress** at capture time. `SIM-01` remains pending file evaluation. The [guest baseline](#guest-access-before-enforcement) confirmed named view-only access for both files.
+
+### Guest access before enforcement
+
+**DLP-01 · PASS.** The same controlled guest opened `BFL-005.docx` and `BFL-021.docx` through their named links in view-only mode while the DLP policy was in simulation. [Stage 02 screenshot 02](stage-02/02-DLP-01-guest-view-BFL-005.png) shows `BFL-005.docx` in Word for the web with **Viewing** selected. The operator separately confirmed the view-only readback for `BFL-021.docx`. Preserve the original links privately for enforcement and rollback.
 
 ## Captures to collect
 
