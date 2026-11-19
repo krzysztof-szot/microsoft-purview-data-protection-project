@@ -14,7 +14,16 @@ The lab operator reached **Data Loss Prevention → Policies** and confirmed tha
 
 ## Pilot entitlement check
 
-On 19 November 2026, the lab operator reported that `PILOT` has Microsoft 365 Business Premium with Copilot and belongs to the label publication group. The enabled SharePoint service plans for `PILOT` and `CONTROL` are still to be verified. The SharePoint external sharing settings must be read at the tenant and pilot-site levels before the guest baseline.
+On 19 November 2026, the lab operator reported that `PILOT` has Microsoft 365 Business Premium with Copilot, belongs to the label publication group, and has SharePoint Online Plan 1 enabled. The entitlement and enabled SharePoint service plan for `CONTROL` remain to be verified.
+
+## SharePoint sharing baseline
+
+| Scope | External sharing | Default file link and permission |
+| --- | --- | --- |
+| SharePoint tenant | Anyone | Anyone with the link |
+| `BFL-Purview-Pilot` | Only people in your organization | Inherits the organization link type and Edit default |
+
+The operator supplied this readback before testing guest access. The pilot-site setting requires an update before an authenticated guest can open the neutral test file. Check the controlled guest's directory entry and use the narrowest site-level setting that supports the test. [Site sharing settings](https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site)
 
 ## Checks before policy changes
 

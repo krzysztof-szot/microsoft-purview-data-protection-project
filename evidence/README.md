@@ -14,6 +14,8 @@ The lab operator reported creating `BFL-Purview-Pilot` using the Team site templ
 
 The operator confirmed that `Finance-Test` contains the four synthetic pilot files and that the empty `Retention-Test` library is available for the later retention exercise.
 
+The sharing readback found that the pilot site's scope is **Only people in your organization**. The [readiness record](../docs/readiness.md#sharepoint-sharing-baseline) captures the tenant and site settings before the named-guest test.
+
 | File in Finance-Test | Purpose |
 | --- | --- |
 | `BFL-005.docx` | SIT-positive fixture for the DLP run |
