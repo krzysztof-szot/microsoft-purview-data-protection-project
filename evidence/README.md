@@ -42,7 +42,7 @@ The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no
 
 [05 · Initial v2 draft](stage-01/05-SIT-02-v2-pattern.png) shows the intended High-confidence pattern before the operator finished saving it. The draft included the primary regex `BFLCaseIdRegex`, the supporting list `BFLFinanceCaseContext` and a 50-character proximity.
 
-Readback confirmed one High-confidence pattern. The saved primary element was the keyword list `BFLFinanceCaseContext`. The proximity field and supporting-elements list were empty. The operator confirmed that the intended changes were not saved. This persisted keyword-only pattern explains the initial test outcomes below.
+Readback confirmed one High-confidence pattern. The saved primary element was the keyword list `BFLFinanceCaseContext`. The saved proximity was 50 characters and the supporting-elements list was empty. The operator confirmed that the intended changes were not saved. This persisted keyword-only pattern explains the initial test outcomes below.
 
 A fresh 20-file v2 run will begin after the intended pattern is saved and verified by readback. The initial observations remain evidence of the configuration error.
 
