@@ -32,13 +32,13 @@ v2_tuning,BFL-014,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator 
 v2_tuning,BFL-015,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-016,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-017,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
-v2_tuning,BFL-021,NOT_RUN,,,
-v2_tuning,BFL-022,NOT_RUN,,,
-v2_tuning,BFL-023,NOT_RUN,,,
-v2_tuning,BFL-024,NOT_RUN,,,
-v2_tuning,BFL-025,NOT_RUN,,,
-v2_tuning,BFL-026,NOT_RUN,,,
-v2_tuning,BFL-027,NOT_RUN,,,
+v2_tuning,BFL-021,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-022,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-023,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-024,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-025,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-026,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
+v2_tuning,BFL-027,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_holdout,BFL-009,NOT_RUN,,,
 v2_holdout,BFL-010,NOT_RUN,,,
 v2_holdout,BFL-011,NOT_RUN,,,

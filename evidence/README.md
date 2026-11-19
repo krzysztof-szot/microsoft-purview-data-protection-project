@@ -78,6 +78,12 @@ The operator reported `NO_MATCH` on all five near-match fixtures in the correcte
 
 All eight positive tuning fixtures matched after the correction. For each of the seven additional DOCX and XLSX files the operator reported one unique case ID and the supporting phrase `synthetic finance case`. `BFL-006` is documented in screenshot 09. The [per-file register](../tests/classification-results.csv) contains the unique observations.
 
+The remaining seven neutral fixtures returned `NO_MATCH`, completing all 20 trials. The corrected v2 run had 8 true positives, 0 false positives, 0 false negatives and 12 true negatives. On this tuning set, precision improved from 72.7% to 100% and recall was 100% in both runs. The [capstone comparison](../docs/capstone.md#classifier-comparison) records the confusion matrices.
+
+### Frozen pattern for holdout
+
+Use the saved `BFL Finance Case v2` pattern with High confidence. The primary element is `BFLCaseIdRegex`. The supporting list `BFLFinanceCaseContext` contains the case-insensitive string `synthetic finance case` with a 50-character proximity. The separate 10-file holdout evaluates this configuration once before any additional tuning.
+
 ## Captures to collect
 
 | Capture | What to show |

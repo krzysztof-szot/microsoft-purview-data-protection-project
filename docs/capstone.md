@@ -30,7 +30,7 @@ Populate with the [recorded SIT observations](../tests/classification-results.cs
 | Run | Corpus | TP | FP | FN | TN |
 | --- | --- | --- | --- | --- | --- |
 | v1 | Tuning | 8 | 3 | 0 | 9 |
-| v2 | Tuning | — | — | — | — |
+| v2 | Tuning | 8 | 0 | 0 | 12 |
 | v2 | Holdout | — | — | — | — |
 
 The corpus measures a deliberately small synthetic case. Report results as counts on these samples.
