@@ -1,11 +1,11 @@
 run_id,fixture_id,result,observed_utc,evidence_path,notes
-v1_tuning,BFL-001,NOT_RUN,,,
+v1_tuning,BFL-001,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-246813 at Low Medium and High. No supporting element.
 v1_tuning,BFL-002,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-247430 at Low Medium and High. No supporting element.
-v1_tuning,BFL-003,NOT_RUN,,,
+v1_tuning,BFL-003,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-248047 at Low Medium and High. No supporting element.
 v1_tuning,BFL-004,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-248664 at Low Medium and High. No supporting element.
-v1_tuning,BFL-005,NOT_RUN,,,
+v1_tuning,BFL-005,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-249281 at Low Medium and High. No supporting element.
 v1_tuning,BFL-006,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier at Low Medium and High. No supporting element.
-v1_tuning,BFL-007,NOT_RUN,,,
+v1_tuning,BFL-007,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-250515 at Low Medium and High. No supporting element.
 v1_tuning,BFL-008,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-251132 at Low Medium and High. No supporting element.
 v1_tuning,BFL-013,NOT_RUN,,,
 v1_tuning,BFL-014,MATCH,,evidence/stage-01/04-SIT-01-v1-BFL-014.png,Same unique identifier shown at Low Medium and High. No supporting element. Timestamp absent from capture.

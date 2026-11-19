@@ -28,6 +28,8 @@ The lab operator configured `BFL Finance Case v1` and observed the portal's crea
 
 All nine tuning workbooks were evaluated. Against the manifest, the workbook subset yielded 4 true positives, 1 false positive, 0 false negatives and 4 true negatives. Purview reported no supporting elements for the matched workbooks. The seven-digit identifier in `BFL-016.xlsx` returned no match. See individual operator-reported results in the [per-file register](../tests/classification-results.csv).
 
+The operator reported one unique match in each of the first four DOCX fixtures, `BFL-001`, `BFL-003`, `BFL-005` and `BFL-007`. All four are finance cases in the manifest. Together with the four positive workbooks, these results cover the eight positive fixtures in the tuning set.
+
 ## Captures to collect
 
 | Capture | What to show |
