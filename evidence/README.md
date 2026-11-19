@@ -145,7 +145,14 @@ The next submission returned `InvalidBlockAccessActionException` with `NotifyUse
 
 ### Guest access before enforcement
 
-**DLP-01 · PASS.** The same controlled guest opened `BFL-005.docx` and `BFL-021.docx` through their named links in view-only mode while the DLP policy was in simulation. [Stage 02 screenshot 02](stage-02/02-DLP-01-guest-view-BFL-005.png) shows `BFL-005.docx` in Word for the web with **Viewing** selected. The operator separately confirmed the view-only readback for `BFL-021.docx`. Preserve the original links privately for enforcement and rollback.
+**DLP-01 · PASS.** The same controlled guest opened `BFL-005.docx` and `BFL-021.docx` through their named links in view-only mode while the DLP policy was in simulation. [Stage 02 screenshot 02](stage-02/02-DLP-01-guest-view-BFL-005.png) shows `BFL-005.docx` in Word for the web with **Viewing** selected. The operator separately confirmed the view-only readback for `BFL-021.docx`. The original links were unavailable for the first [enforcement retest](#access-after-policy-activation).
+
+### Access after policy activation
+
+The operator reported **On** and **Sync completed** for `BFL SharePoint External Access`. The original guest links were unavailable, so the operator generated replacement links for both fixtures.
+
+- **DLP-02 · PENDING.** `GUEST` opened both `BFL-005.docx` and `BFL-021.docx` using the replacement links. The first attempt did not produce the expected denial. Verify the sharing scope and look up post-activation rule events for `BFL-005.docx` before attributing the outcome to the policy. Retain the replacement links privately for the next test.
+- **DLP-03 · PASS.** The operator confirmed that `CONTROL` opened `BFL-005.docx` after activation.
 
 ## Captures to collect
 
@@ -157,6 +164,6 @@ The next submission returned `InvalidBlockAccessActionException` with `NotifyUse
 | DLP-02 and DLP-03 | Guest allow/deny and an ordinary internal user's access |
 | LOG-01 | Rule, file, workload and UTC time in the cited signal |
 | RET-01 to RET-03 | Label state, deletion and independently confirmed preservation |
-| RBK-01 | Disabled pilot policy and reopened confidential file using the original guest link |
+| RBK-01 | Disabled pilot policy and reopened confidential file using the same link tested under enforcement |
 
 Preserve fixture names, policy names, role aliases and UTC timestamps where safe. Redact tenant/account identifiers, URLs and tokens, IP addresses, device identifiers, billing profiles, notifications and other visible browser context. Review the redacted file itself before committing it.

@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **13 PASS and 11 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **14 PASS, 1 PENDING and 9 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -77,7 +77,7 @@ flowchart LR
     DLP -->|"Neutral control"| Allow["Guest opens the approved file"]
     DLP -->|"Confidential case"| Deny["Guest access restricted"]
     Deny --> Triage["Analyst correlates rule and file activity"]
-    Triage --> Recovery["Disable pilot policy and retest original links"]
+    Triage --> Recovery["Disable pilot policy and retest enforcement links"]
     Author --> Retention["SharePoint pilot · Retention-Test"]
     Retention --> Preserve["Verify retained copy after user deletion"]
 ```
