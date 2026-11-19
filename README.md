@@ -85,7 +85,7 @@ The primary DLP rule uses the custom SIT. If the tenant supports sensitivity-lab
 | Stage | Validation milestone | Status |
 | --- | --- | --- |
 | 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | In progress |
-| 1 · Classification and labeling | Compare a pattern-only SIT and a contextual SIT on 20 tuning files. Test the frozen rule on 10 reserved files | In progress |
+| 1 · Classification and labeling | Compare the two classifiers and test the frozen rule on the reserved files. Verify manually applied sensitivity labels in SharePoint | In progress |
 | 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | `NOT_RUN` |
 | 3 · Lifecycle controls | Verify preservation after deletion. Exercise service-side auto-labeling if the license permits | `NOT_RUN` |
 | 4 · Capstone and closure | Repeat the allow and deny cases, then verify recovery after policy withdrawal | `NOT_RUN` |

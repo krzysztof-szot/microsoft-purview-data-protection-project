@@ -8,6 +8,10 @@ Publish evidence after each live test is observed. Use repo-relative paths in th
 
 **LIC-05 · 18 November 2026.** The lab operator confirmed that **SharePoint sites** is selectable in the custom DLP policy wizard under **Enterprise applications & devices**. This verifies availability in the wizard. Pilot scoping and enforcement have their own tests.
 
+## SharePoint pilot setup
+
+The lab operator reported creating `BFL-Purview-Pilot` using the Team site template without a Microsoft 365 group. The site is the scope for the configuration and file-level checks in the [pilot procedure](../docs/lab-guide.md#1-establish-the-pilot-boundary).
+
 ## Baseline sensitive information type
 
 The lab operator configured `BFL Finance Case v1` and observed the portal's creation confirmation. The configuration captures show what was saved. File-level matching is tracked separately under `SIT-01`.
