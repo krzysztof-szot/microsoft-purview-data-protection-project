@@ -29,7 +29,7 @@ Populate with the [recorded SIT observations](../tests/classification-results.cs
 
 | Run | Corpus | TP | FP | FN | TN |
 | --- | --- | --- | --- | --- | --- |
-| v1 | Tuning | — | — | — | — |
+| v1 | Tuning | 8 | 3 | 0 | 9 |
 | v2 | Tuning | — | — | — | — |
 | v2 | Holdout | — | — | — | — |
 

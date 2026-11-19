@@ -26,9 +26,15 @@ The lab operator configured `BFL Finance Case v1` and observed the portal's crea
 | `BFL-014.xlsx` | One unique identifier `BFLCASE-254834` shown at Low, Medium and High | False positive on an identifier with unrelated context. [04 · Match results](stage-01/04-SIT-01-v1-BFL-014.png) |
 | `BFL-026.xlsx` | No sensitive information detected | True negative on the neutral control. Result reported by the lab operator |
 
-All nine tuning workbooks were evaluated. Against the manifest, the workbook subset yielded 4 true positives, 1 false positive, 0 false negatives and 4 true negatives. Purview reported no supporting elements for the matched workbooks. The seven-digit identifier in `BFL-016.xlsx` returned no match. See individual operator-reported results in the [per-file register](../tests/classification-results.csv).
+The baseline classified all 20 tuning fixtures. The eight finance cases matched and nine non-case fixtures returned no match. Precision was 72.7% (8 of 11 matches) and recall was 100% (8 of 8 finance cases) on the tuning set.
 
-The operator reported one unique match in each of the first four DOCX fixtures, `BFL-001`, `BFL-003`, `BFL-005` and `BFL-007`. All four are finance cases in the manifest. Together with the four positive workbooks, these results cover the eight positive fixtures in the tuning set.
+| False-positive fixture | Why the pattern-only rule matched |
+| --- | --- |
+| `BFL-013.docx` | Well-formed ID without the supporting phrase |
+| `BFL-014.xlsx` | Well-formed ID next to unrelated context |
+| `BFL-017.docx` | Well-formed ID with the supporting phrase over 500 characters away |
+
+The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no match. The v2 experiment will require the supporting phrase within 50 characters of the case ID. See the [per-file register](../tests/classification-results.csv) for the observed results.
 
 ## Captures to collect
 

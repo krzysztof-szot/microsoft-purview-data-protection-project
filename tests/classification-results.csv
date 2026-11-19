@@ -7,18 +7,18 @@ v1_tuning,BFL-005,MATCH,,evidence/README.md#baseline-tuning-observations,Operato
 v1_tuning,BFL-006,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier at Low Medium and High. No supporting element.
 v1_tuning,BFL-007,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-250515 at Low Medium and High. No supporting element.
 v1_tuning,BFL-008,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-251132 at Low Medium and High. No supporting element.
-v1_tuning,BFL-013,NOT_RUN,,,
+v1_tuning,BFL-013,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-254217 at Low Medium and High. No supporting element.
 v1_tuning,BFL-014,MATCH,,evidence/stage-01/04-SIT-01-v1-BFL-014.png,Same unique identifier shown at Low Medium and High. No supporting element. Timestamp absent from capture.
-v1_tuning,BFL-015,NOT_RUN,,,
+v1_tuning,BFL-015,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-016,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
-v1_tuning,BFL-017,NOT_RUN,,,
-v1_tuning,BFL-021,NOT_RUN,,,
+v1_tuning,BFL-017,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier BFLCASE-256685 at Low Medium and High. No supporting element.
+v1_tuning,BFL-021,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-022,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
-v1_tuning,BFL-023,NOT_RUN,,,
+v1_tuning,BFL-023,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-024,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
-v1_tuning,BFL-025,NOT_RUN,,,
+v1_tuning,BFL-025,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-026,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
-v1_tuning,BFL-027,NOT_RUN,,,
+v1_tuning,BFL-027,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v2_tuning,BFL-001,NOT_RUN,,,
 v2_tuning,BFL-002,NOT_RUN,,,
 v2_tuning,BFL-003,NOT_RUN,,,
