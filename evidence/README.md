@@ -149,9 +149,9 @@ The next submission returned `InvalidBlockAccessActionException` with `NotifyUse
 
 ### Access after policy activation
 
-The operator reported **On** and **Sync completed** for `BFL SharePoint External Access`. The original guest links were unavailable, so the operator generated replacement links for both fixtures.
+The operator reported **On** and **Sync completed** for `BFL SharePoint External Access`. The original guest links were unavailable, so the operator generated replacement links for both fixtures. The operator confirmed that the replacement link for `BFL-005.docx` uses **People you choose**, the named-recipient sharing option. [Microsoft sharing options](https://support.microsoft.com/en-us/sharepoint/libraries/sharing-files-folders-and-list-items)
 
-- **DLP-02 · PENDING.** `GUEST` opened both `BFL-005.docx` and `BFL-021.docx` using the replacement links. The first attempt did not produce the expected denial. Verify the sharing scope and look up post-activation rule events for `BFL-005.docx` before attributing the outcome to the policy. Retain the replacement links privately for the next test.
+- **DLP-02 · PENDING.** `GUEST` opened both `BFL-005.docx` and `BFL-021.docx` using the replacement links. The first attempt did not produce the expected denial. The next check is a post-activation `DlpRuleMatch` audit search for `BFL-005.docx`. Retain the replacement links privately for the next test.
 - **DLP-03 · PASS.** The operator confirmed that `CONTROL` opened `BFL-005.docx` after activation.
 
 ## Captures to collect
