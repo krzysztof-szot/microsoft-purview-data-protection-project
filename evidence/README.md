@@ -129,6 +129,10 @@ The operator published both labels in `BFL Purview Pilot Labels` with `BFL-Purvi
 
 **LBL-02 · PASS.** The same library shows `BFL Internal` for `BFL-024.xlsx` after manual labeling. [Stage 01 screenshot 10](stage-01/10-LBL-01-LBL-02-sharepoint-sensitivity.png) captures both saved labels with **Modified By** hidden.
 
+## DLP rule validation
+
+**SIM-01.** The initial draft reached the review step in simulation mode. The portal rejected submission because external sharing must be the first condition joined by `AND` to the other conditions when blocking external access. The corrected design adds this condition before `BFL Finance Case v2`. The [lab guide](../docs/lab-guide.md#4-simulate-and-enforce-dlp) records the test setup.
+
 ## Captures to collect
 
 | Capture | What to show |

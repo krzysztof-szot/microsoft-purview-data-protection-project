@@ -71,7 +71,7 @@ The [capstone](docs/capstone.md) defines the evidence required for a policy matc
 ```mermaid
 flowchart LR
     Author["Finance author"] --> Finance["SharePoint pilot · Finance-Test"]
-    Finance --> DLP{"Purview DLP · contextual SIT"}
+    Finance --> DLP{"Purview DLP · external sharing and contextual SIT"}
     DLP -->|"Neutral control"| Allow["Guest opens the approved file"]
     DLP -->|"Confidential case"| Deny["Guest access restricted"]
     Deny --> Triage["Analyst correlates rule and file activity"]
@@ -80,7 +80,7 @@ flowchart LR
     Retention --> Preserve["Verify retained copy after user deletion"]
 ```
 
-The primary DLP rule uses the custom SIT. If the tenant supports sensitivity-label conditions, a separate simulation tests the manual label as a trigger. The retention test uses a dedicated copy so it can be verified independently.
+The primary DLP rule combines external sharing with a match on the contextual SIT. If the tenant supports sensitivity-label conditions, a separate simulation tests the manual label as a trigger. The retention test uses a dedicated copy so it can be verified independently.
 
 ## Implementation Progress
 
@@ -88,7 +88,7 @@ The primary DLP rule uses the custom SIT. If the tenant supports sensitivity-lab
 | --- | --- | --- |
 | 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | Complete |
 | 1 · Classification and labeling | Compare the two classifiers and test the frozen rule on the reserved files. Verify manually applied sensitivity labels in SharePoint | Complete |
-| 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | `NOT_RUN` |
+| 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | In progress |
 | 3 · Lifecycle controls | Verify preservation after deletion. Exercise service-side auto-labeling if the license permits | `NOT_RUN` |
 | 4 · Capstone and closure | Repeat the allow and deny cases, then verify recovery after policy withdrawal | `NOT_RUN` |
 
