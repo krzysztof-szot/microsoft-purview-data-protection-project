@@ -107,6 +107,8 @@ The holdout result was 4 true positives, 0 false positives, 0 false negatives an
 
 The operator confirmed that `BFL Internal` and `BFL Finance Confidential` were created. Both labels use the **Files & other data assets** scope. The review screens showed no access control, content marking, or automatic labeling. The operator created the `BFL-Purview-Label-Pilot` security group with one test member for the planned publishing policy.
 
+The operator reported publishing both labels in `BFL Purview Pilot Labels` with `BFL-Purview-Label-Pilot` as the single included group. The policy is for manual labeling with no default or required label. Policy sync and availability in the pilot user's session are pending verification.
+
 File-label tests `LBL-01` and `LBL-02` will verify that the assigned labels persist after applying them to the target files in `Finance-Test`.
 
 ## Captures to collect
