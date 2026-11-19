@@ -16,10 +16,16 @@ The lab operator configured `BFL Finance Case v1` and observed the portal's crea
 | --- | --- |
 | [01 · Regular expression](stage-01/01-SIT-01-v1-regex.png) | `BFLCaseIdRegex` has one capturing group for the six-digit case identifier. It uses String match with no validators |
 | [02 · Pattern settings](stage-01/02-SIT-01-v1-pattern.png) | High confidence, 50-character proximity, and a single primary element with no supporting elements or additional checks |
+| [03 · Creation confirmation](stage-01/03-SIT-01-v1-created.png) | Portal confirmation after the operator submitted the baseline SIT |
 
-### First baseline tuning result
+### Baseline tuning observations
 
-[04 · BFL-014 match results](stage-01/04-SIT-01-v1-BFL-014.png) shows one unique synthetic identifier, `BFLCASE-254834`, at each of the Low, Medium and High confidence levels. No supporting elements were reported. The fixture is a near match with unrelated context. This is one file-level false positive for v1 against the manifest. The remaining tuning results will be collected under `SIT-01`.
+| Fixture | Purview v1 result | Interpretation and evidence |
+| --- | --- | --- |
+| `BFL-006.xlsx` | One unique identifier `BFLCASE-249898` shown at Low, Medium and High | True positive on known finance-case content. Result reported by the lab operator |
+| `BFL-014.xlsx` | One unique identifier `BFLCASE-254834` shown at Low, Medium and High | False positive on an identifier with unrelated context. [04 · Match results](stage-01/04-SIT-01-v1-BFL-014.png) |
+
+Both results reported no supporting elements. See the [per-file register](../tests/classification-results.csv) for tuning coverage.
 
 ## Captures to collect
 

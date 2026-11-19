@@ -4,7 +4,7 @@ v1_tuning,BFL-002,NOT_RUN,,,
 v1_tuning,BFL-003,NOT_RUN,,,
 v1_tuning,BFL-004,NOT_RUN,,,
 v1_tuning,BFL-005,NOT_RUN,,,
-v1_tuning,BFL-006,NOT_RUN,,,
+v1_tuning,BFL-006,MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported one unique identifier at Low Medium and High. No supporting element.
 v1_tuning,BFL-007,NOT_RUN,,,
 v1_tuning,BFL-008,NOT_RUN,,,
 v1_tuning,BFL-013,NOT_RUN,,,
