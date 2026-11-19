@@ -16,6 +16,8 @@ The operator confirmed that `Finance-Test` contains the four synthetic pilot fil
 
 The initial pilot-site scope was **Only people in your organization**. The operator verified the controlled guest in Microsoft Entra ID and confirmed the stored pilot-site settings **Existing guests only**, **Specific people**, and **View**. See the [readiness record](../docs/readiness.md#sharepoint-sharing-baseline) for the before-and-after settings.
 
+The first recipient lookup for `ENV-01` displayed a directory group. The operator is verifying the controlled guest by its original external email address before sending the named link.
+
 | File in Finance-Test | Purpose |
 | --- | --- |
 | `BFL-005.docx` | SIT-positive fixture for the DLP run |
