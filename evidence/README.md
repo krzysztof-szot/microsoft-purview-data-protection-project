@@ -10,12 +10,16 @@ Publish evidence after each live test is observed. Use repo-relative paths in th
 
 ## Baseline sensitive information type
 
-The lab operator configured `BFL Finance Case v1` and observed the portal's creation confirmation. The configuration captures show what was saved. File-level matching will be recorded separately under `SIT-01`.
+The lab operator configured `BFL Finance Case v1` and observed the portal's creation confirmation. The configuration captures show what was saved. File-level matching is tracked separately under `SIT-01`.
 
 | Screenshot | What it shows |
 | --- | --- |
 | [01 · Regular expression](stage-01/01-SIT-01-v1-regex.png) | `BFLCaseIdRegex` has one capturing group for the six-digit case identifier. It uses String match with no validators |
 | [02 · Pattern settings](stage-01/02-SIT-01-v1-pattern.png) | High confidence, 50-character proximity, and a single primary element with no supporting elements or additional checks |
+
+### First baseline tuning result
+
+[04 · BFL-014 match results](stage-01/04-SIT-01-v1-BFL-014.png) shows one unique synthetic identifier, `BFLCASE-254834`, at each of the Low, Medium and High confidence levels. No supporting elements were reported. The fixture is a near match with unrelated context. This is one file-level false positive for v1 against the manifest. The remaining tuning results will be collected under `SIT-01`.
 
 ## Captures to collect
 
