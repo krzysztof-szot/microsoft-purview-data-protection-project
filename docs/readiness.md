@@ -8,7 +8,7 @@
 | Microsoft 365 E5 Information Protection and Governance | Available but unassigned | Candidate for service-side auto-labeling after prerequisite and assignment verification |
 | Microsoft 365 E5 | Disabled in the lab | Excluded from the entitlement calculation |
 
-The lab operator confirmed SharePoint Online access and a controlled guest identity. The dates shown for Business Premium and the E5 Information Protection and Governance add-on are expiration dates. Recurring billing remains to be verified for both. Use the earliest confirmed end date among the required subscriptions and reserve the final five days for retesting, evidence export and rollback.
+The lab operator confirmed SharePoint Online access and a controlled guest identity. The dates shown for Business Premium and the E5 Information Protection and Governance add-on are expiration dates. The lab operator reported **Recurring billing: Off** for both subscriptions. Use the earliest confirmed end date among the required subscriptions and reserve the final five days for retesting, evidence export and rollback.
 
 The lab operator reached **Data Loss Prevention → Policies** and confirmed that **SharePoint sites** is selectable in the custom-policy wizard. Deployment permissions and effective policy behavior will be tested during the pilot. See the [sanitized portal observation](../evidence/README.md#dlp-portal-baseline).
 
@@ -65,6 +65,6 @@ Move any milestone tied to asynchronous processing according to service observat
 
 ## Readiness decision
 
-- **Core SharePoint pilot:** Base SKU, SharePoint access and guest identity identified. Confirm per-user service plans, product details and policy permissions.
+- **Core SharePoint pilot:** Base subscription and per-user SharePoint plans verified. Named guest access and SharePoint scope availability in the DLP wizard were confirmed.
 - **Automatic labeling readiness (`LIC-03`):** `PASS`. The pilot add-on assignment and SharePoint wizard scope were verified. File-level automatic labeling is planned for Stage 3.
-- **Next action:** Finish the read-only checks and record the relevant outcomes in [the test matrix](../tests/test-matrix.csv).
+- **Next action:** Verify that the manually applied sensitivity labels persist in SharePoint in Stage 01. The [test matrix](../tests/test-matrix.csv) records the completed Stage 0 checks.

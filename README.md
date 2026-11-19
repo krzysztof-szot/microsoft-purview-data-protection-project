@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **8 PASS, 1 PENDING and 15 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **9 PASS and 15 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -85,7 +85,7 @@ The primary DLP rule uses the custom SIT. If the tenant supports sensitivity-lab
 
 | Stage | Validation milestone | Status |
 | --- | --- | --- |
-| 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | In progress |
+| 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | Complete |
 | 1 · Classification and labeling | Compare the two classifiers and test the frozen rule on the reserved files. Verify manually applied sensitivity labels in SharePoint | In progress |
 | 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | `NOT_RUN` |
 | 3 · Lifecycle controls | Verify preservation after deletion. Exercise service-side auto-labeling if the license permits | `NOT_RUN` |
