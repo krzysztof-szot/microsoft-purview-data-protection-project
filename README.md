@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **3 PASS, 1 PENDING and 20 NOT_RUN**. The baseline classifier run is complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **3 PASS, 2 PENDING and 19 NOT_RUN**. The baseline classifier run is complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md) tracks the remaining entitlement checks for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -58,6 +58,7 @@ The [test matrix](tests/test-matrix.csv) records **3 PASS, 1 PENDING and 20 NOT_
 | `SIT-01` · Classifier setup | Created `BFL Finance Case v1` with the baseline regex at High confidence | [Baseline SIT configuration](evidence/README.md#baseline-sensitive-information-type) |
 | `SIT-01` · Baseline evaluation | 20 of 20 tuning samples evaluated. 8 true positives, 3 false positives, 0 false negatives and 9 true negatives | [Tuning results](evidence/README.md#baseline-tuning-observations) · [Screenshot 04](evidence/stage-01/04-SIT-01-v1-BFL-014.png) |
 | `SIT-02` · Configuration readback | The initial v2 draft was not saved as intended. The stored keyword-only pattern explained the diagnostic match and prompted a fresh evaluation | [Readback and initial observations](evidence/README.md#contextual-sensitive-information-type) |
+| `SIT-02` · Corrected positive control | v2 reported case ID `BFLCASE-249898` with the supporting phrase on `BFL-006.xlsx` after the pattern was saved correctly | [Screenshot 09](evidence/stage-01/09-SIT-02-v2-retest-BFL-006.png) |
 
 The [capstone](docs/capstone.md) defines the evidence required for a policy match, guest denial, internal access, incident reconstruction and recovery.
 

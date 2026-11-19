@@ -44,7 +44,7 @@ The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no
 
 Readback confirmed one High-confidence pattern. The saved primary element was the keyword list `BFLFinanceCaseContext`. The saved proximity was 50 characters and the supporting-elements list was empty. The operator confirmed that the intended changes were not saved. This persisted keyword-only pattern explains the initial test outcomes below.
 
-A fresh 20-file v2 run will begin after the intended pattern is saved and verified by readback. The initial observations remain evidence of the configuration error.
+The initial observations remain evidence of the configuration error. Results from the saved correction appear under the corrected v2 run below.
 
 ### Same-file comparison
 
@@ -68,7 +68,11 @@ The [diagnostic workbook](../fixtures/diagnostics/phrase-only.xlsx) keeps the sa
 
 [08 · Phrase-only v2 result](stage-01/08-SIT-02-v2-phrase-only.png) shows that `BFL Finance Case v2` returned `MATCH` on `phrase-only.xlsx`. The result displayed one unique match at each confidence level with `synthetic finance case` under **Matches** and `None` under **Supporting elements**. The workbook contains the phrase and no case identifier. This result is consistent with the saved keyword list functioning as the primary element.
 
-After saving the corrected v2 pattern, the operator retested the same `phrase-only.xlsx` workbook and reported `NO_MATCH`. The initial saved pattern returned `MATCH` on this workbook. The corrected pattern passed this diagnostic control. A positive control will check that a valid case identifier with the supporting phrase still matches. This diagnostic remains outside the 20-file tuning matrix.
+After saving the corrected v2 pattern, the operator retested the same `phrase-only.xlsx` workbook and reported `NO_MATCH`. The initial saved pattern returned `MATCH` on this workbook. The corrected pattern passed this diagnostic control. This diagnostic remains outside the 20-file tuning matrix.
+
+### Corrected v2 tuning run
+
+[09 · BFL-006 positive retest](stage-01/09-SIT-02-v2-retest-BFL-006.png) shows a single unique match for `BFL Finance Case v2` at each confidence level. **Matches** shows `BFLCASE-249898` and **Supporting elements** shows `synthetic finance case`. The same saved configuration returned `NO_MATCH` on the phrase-only diagnostic. This begins the corrected 20-file tuning run.
 
 ## Captures to collect
 

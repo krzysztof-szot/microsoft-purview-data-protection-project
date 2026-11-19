@@ -24,7 +24,7 @@ v2_tuning,BFL-002,NOT_RUN,,,
 v2_tuning,BFL-003,NOT_RUN,,,
 v2_tuning,BFL-004,NOT_RUN,,,
 v2_tuning,BFL-005,NOT_RUN,,,
-v2_tuning,BFL-006,NOT_RUN,,,
+v2_tuning,BFL-006,MATCH,,evidence/stage-01/09-SIT-02-v2-retest-BFL-006.png,One unique match at Low Medium and High. Matches displayed BFLCASE-249898 and Supporting elements displayed synthetic finance case.
 v2_tuning,BFL-007,NOT_RUN,,,
 v2_tuning,BFL-008,NOT_RUN,,,
 v2_tuning,BFL-013,NOT_RUN,,,
