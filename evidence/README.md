@@ -103,6 +103,12 @@ The operator reported results for all ten held-out files using the frozen `BFL F
 
 The holdout result was 4 true positives, 0 false positives, 0 false negatives and 6 true negatives. See the [per-file register](../tests/classification-results.csv) and the [confusion matrices](../docs/capstone.md#classifier-comparison).
 
+## Sensitivity label setup
+
+The operator confirmed that `BFL Internal` and `BFL Finance Confidential` were created. Both labels use the **Files & other data assets** scope. The review screens showed no access control, content marking, or automatic labeling. The operator created the `BFL-Purview-Label-Pilot` security group with one test member for the planned publishing policy.
+
+File-label tests `LBL-01` and `LBL-02` will verify that the assigned labels persist after applying them to the target files in `Finance-Test`.
+
 ## Captures to collect
 
 | Capture | What to show |
