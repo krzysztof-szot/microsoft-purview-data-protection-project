@@ -76,6 +76,8 @@ After saving the corrected v2 pattern, the operator retested the same `phrase-on
 
 The operator reported `NO_MATCH` on all five near-match fixtures in the corrected tuning run. `BFL-013`, `BFL-014` and `BFL-017` had triggered v1. The five- and seven-digit controls `BFL-015` and `BFL-016` also returned `NO_MATCH`, including the seven-digit example that had triggered the initial keyword-only v2 pattern.
 
+All eight positive tuning fixtures matched after the correction. For each of the seven additional DOCX and XLSX files the operator reported one unique case ID and the supporting phrase `synthetic finance case`. `BFL-006` is documented in screenshot 09. The [per-file register](../tests/classification-results.csv) contains the unique observations.
+
 ## Captures to collect
 
 | Capture | What to show |

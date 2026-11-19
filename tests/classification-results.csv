@@ -19,14 +19,14 @@ v1_tuning,BFL-024,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Oper
 v1_tuning,BFL-025,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-026,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
 v1_tuning,BFL-027,NO_MATCH,,evidence/README.md#baseline-tuning-observations,Operator reported that Purview detected no sensitive information.
-v2_tuning,BFL-001,NOT_RUN,,,
-v2_tuning,BFL-002,NOT_RUN,,,
-v2_tuning,BFL-003,NOT_RUN,,,
-v2_tuning,BFL-004,NOT_RUN,,,
-v2_tuning,BFL-005,NOT_RUN,,,
+v2_tuning,BFL-001,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-246813 at Low Medium and High with supporting phrase synthetic finance case.
+v2_tuning,BFL-002,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-247430 at Low Medium and High with supporting phrase synthetic finance case.
+v2_tuning,BFL-003,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-248047 at Low Medium and High with supporting phrase synthetic finance case.
+v2_tuning,BFL-004,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-248664 at Low Medium and High with supporting phrase synthetic finance case.
+v2_tuning,BFL-005,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-249281 at Low Medium and High with supporting phrase synthetic finance case.
 v2_tuning,BFL-006,MATCH,,evidence/stage-01/09-SIT-02-v2-retest-BFL-006.png,One unique match at Low Medium and High. Matches displayed BFLCASE-249898 and Supporting elements displayed synthetic finance case.
-v2_tuning,BFL-007,NOT_RUN,,,
-v2_tuning,BFL-008,NOT_RUN,,,
+v2_tuning,BFL-007,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-250515 at Low Medium and High with supporting phrase synthetic finance case.
+v2_tuning,BFL-008,MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported one unique identifier BFLCASE-251132 at Low Medium and High with supporting phrase synthetic finance case.
 v2_tuning,BFL-013,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-014,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
 v2_tuning,BFL-015,NO_MATCH,,evidence/README.md#corrected-v2-tuning-run,Operator reported no sensitive information in the corrected v2 run.
