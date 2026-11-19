@@ -52,6 +52,12 @@ The lab operator selected `BFL Finance Case v2` for the second test. The result 
 
 [07 · BFL-006 match results](stage-01/07-SIT-02-v2-BFL-006.png) confirms one unique match for `BFL Finance Case v2` at each confidence level. Purview displayed `synthetic finance case` under **Matches** and `None` under **Supporting elements**. This is a true positive at file level. The malformed-ID fixture `BFL-016.xlsx` provides a separate check of whether the phrase can trigger a match without a valid identifier.
 
+### Malformed-ID control
+
+The v1 test returned `NO_MATCH` on `BFL-016.xlsx`. The operator reported one unique v2 match at Low, Medium and High. Purview displayed `synthetic finance case` under **Matches** and `None` under **Supporting elements**. The seven-digit ID places this fixture outside the positive ground truth. This is a new file-level false positive for v2.
+
+The [diagnostic workbook](../fixtures/diagnostics/phrase-only.xlsx) keeps the same workbook content except that the seven-digit identifier in cell A5 is replaced with `omitted`. Use this control to check whether the saved v2 classifier returns a match when the phrase appears without an identifier. The diagnostic is outside the 20-file tuning matrix and the holdout set.
+
 ## Captures to collect
 
 | Capture | What to show |
