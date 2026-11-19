@@ -8,7 +8,7 @@
 | Microsoft 365 E5 Information Protection and Governance | Available but unassigned | Candidate for service-side auto-labeling after prerequisite and assignment verification |
 | Microsoft 365 E5 | Disabled in the lab | Excluded from the entitlement calculation |
 
-The lab operator confirmed SharePoint Online access, a controlled guest identity and the base subscription's expiration date. Use the earliest confirmed end date among the required subscriptions and reserve the final five days for retesting, evidence export and rollback.
+The lab operator confirmed SharePoint Online access and a controlled guest identity. The dates shown for Business Premium and the E5 Information Protection and Governance add-on are expiration dates. Recurring billing remains to be verified for both. Use the earliest confirmed end date among the required subscriptions and reserve the final five days for retesting, evidence export and rollback.
 
 The lab operator reached **Data Loss Prevention → Policies** and confirmed that **SharePoint sites** is selectable in the custom-policy wizard. Deployment permissions and effective policy behavior will be tested during the pilot. See the [sanitized portal observation](../evidence/README.md#dlp-portal-baseline).
 
@@ -22,6 +22,10 @@ On 19 November 2026, the lab operator reported the following assigned licenses a
 | `CONTROL` | Microsoft 365 Business Premium | SharePoint Online Plan 1 enabled |
 
 This readback satisfies `LIC-02`. Site access and effective file permissions are checked separately.
+
+## Advanced labeling entitlement check
+
+The Microsoft Customer Agreement prerequisites list Business Premium as a qualifying base license for E5 Information Protection and Governance. Microsoft's service description includes service-side automatic sensitivity labeling in the add-on. The pilot still needs an assigned seat and a wizard readback for the SharePoint location. [Product Terms for Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/en-US/productoffering/MicrosoftPurview/MCA#LicensePrerequisites) · [Purview service description](https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling)
 
 ## SharePoint sharing baseline
 
