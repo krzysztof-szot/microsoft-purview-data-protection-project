@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **11 PASS and 13 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **11 PASS, 1 PENDING and 12 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -63,6 +63,7 @@ The [test matrix](tests/test-matrix.csv) records **11 PASS and 13 NOT_RUN**. The
 | `SIT-02` · Tuning comparison | v2 reduced false positives from 3 to 0 while detecting all 8 finance cases in the tuning set | [Tuning results](evidence/README.md#corrected-v2-tuning-run) |
 | `SIT-03` · Holdout evaluation | Frozen v2 matched all 4 finance cases and returned no match on all 6 controls in the separate holdout | [Holdout results](evidence/README.md#holdout-evaluation) |
 | `LBL-01` and `LBL-02` · Manual label persistence | SharePoint displayed the assigned sensitivity label for each test workbook | [Stage 01 screenshot 10](evidence/stage-01/10-LBL-01-LBL-02-sharepoint-sensitivity.png) |
+| `SIM-01` · DLP policy mode | `BFL SharePoint External Access` was saved in simulation without notifications | [Stage 02 screenshot 01](evidence/stage-02/01-SIM-01-dlp-policy-in-simulation.png) |
 
 The [capstone](docs/capstone.md) defines the evidence required for a policy match, guest denial, internal access, incident reconstruction and recovery.
 
