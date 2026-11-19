@@ -58,6 +58,10 @@ The v1 test returned `NO_MATCH` on `BFL-016.xlsx`. The operator reported one uni
 
 The [diagnostic workbook](../fixtures/diagnostics/phrase-only.xlsx) keeps the same workbook content except that the seven-digit identifier in cell A5 is replaced with `omitted`. Use this control to check whether the saved v2 classifier returns a match when the phrase appears without an identifier. The diagnostic is outside the 20-file tuning matrix and the holdout set.
 
+### Phrase-only diagnostic
+
+[08 · Phrase-only v2 result](stage-01/08-SIT-02-v2-phrase-only.png) shows that `BFL Finance Case v2` returned `MATCH` on `phrase-only.xlsx`. The result displayed one unique match at each confidence level with `synthetic finance case` under **Matches** and `None` under **Supporting elements**. The workbook contains the phrase and no case identifier. The observed SIT test therefore accepts a file that fails the required ID-and-context condition. The next diagnostic step is to inspect the saved pattern and its elements. Explain the behavior before selecting a classifier for DLP.
+
 ## Captures to collect
 
 | Capture | What to show |
