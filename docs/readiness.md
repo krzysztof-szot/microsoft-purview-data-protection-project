@@ -23,7 +23,7 @@ On 19 November 2026, the lab operator reported that `PILOT` has Microsoft 365 Bu
 | SharePoint tenant | Anyone | Anyone with the link |
 | `BFL-Purview-Pilot` | Only people in your organization | Inherits the organization link type and Edit default |
 
-The operator supplied this readback before testing guest access. The pilot-site setting requires an update before an authenticated guest can open the neutral test file. Check the controlled guest's directory entry and use the narrowest site-level setting that supports the test. [Site sharing settings](https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site)
+The operator supplied this readback before testing guest access. The operator confirmed that the controlled test identity already exists as a guest in Microsoft Entra ID. After updating the pilot site, the operator reopened its settings and confirmed **Existing guests only**, **Specific people**, and a default permission of **View**. This prepares the scope for a named-file access check. [Site sharing settings](https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site)
 
 ## Checks before policy changes
 
