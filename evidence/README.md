@@ -133,6 +133,8 @@ The operator published both labels in `BFL Purview Pilot Labels` with `BFL-Purvi
 
 **SIM-01.** The initial draft reached the review step in simulation mode. The portal rejected submission because external sharing must be the first condition joined by `AND` to the other conditions when blocking external access. The corrected design adds this condition before `BFL Finance Case v2`. The [lab guide](../docs/lab-guide.md#4-simulate-and-enforce-dlp) records the test setup.
 
+The next submission returned `InvalidBlockAccessActionException` with `NotifyUser` missing for the external blocking action. The rule setup now includes the user-notification configuration from the Microsoft example. The draft still requires a successful simulation-mode submission.
+
 ## Captures to collect
 
 | Capture | What to show |
