@@ -121,9 +121,13 @@ The holdout result was 4 true positives, 0 false positives, 0 false negatives an
 
 The operator confirmed that `BFL Internal` and `BFL Finance Confidential` were created. Both labels use the **Files & other data assets** scope. The review screens showed no access control, content marking, or automatic labeling. The operator created the `BFL-Purview-Label-Pilot` security group for the publishing policy. A membership check found the site administrator in the group. The pilot tests require a licensed, non-administrative group member.
 
-The operator published both labels in `BFL Purview Pilot Labels` with `BFL-Purview-Label-Pilot` as the single included group and reported adding `PILOT` to that group. The policy is for manual labeling with no default or required label. The operator observed **Sync completed**. Edit access and label availability in the pilot user's session remain to be verified.
+The operator published both labels in `BFL Purview Pilot Labels` with `BFL-Purview-Label-Pilot` as the single included group and reported adding `PILOT` to that group. The policy is for manual labeling with no default or required label. The operator observed **Sync completed**. The pilot user's Excel for the web session showed editing mode and both published labels.
 
-File-label tests `LBL-01` and `LBL-02` will verify that the assigned labels persist after applying them to the target files in `Finance-Test`.
+### Manual label persistence
+
+**LBL-01 · PASS.** The operator's SharePoint readback showed `BFL Finance Confidential` in the **Sensitivity** column for `BFL-022.xlsx` in `Finance-Test` after the manual labeling step. The source capture contains account display names and is retained privately.
+
+`LBL-02` checks whether `BFL Internal` persists on `BFL-024.xlsx`. The evidence capture will show both saved labels in `Finance-Test` with the account column hidden.
 
 ## Captures to collect
 
@@ -131,6 +135,7 @@ File-label tests `LBL-01` and `LBL-02` will verify that the assigned labels pers
 | --- | --- |
 | ENV-01 | Named guest opening the neutral fixture in a separate session |
 | SIT-01 to SIT-03 | Rule definitions and sanitized per-file classifier outcomes |
+| LBL-01 and LBL-02 | Both workbook names and saved labels in the SharePoint **Sensitivity** column |
 | SIM-01 | Pilot-site scope, simulation mode and matched fixture |
 | DLP-02 and DLP-03 | Guest allow/deny and an ordinary internal user's access |
 | LOG-01 | Rule, file, workload and UTC time in the cited signal |
