@@ -14,7 +14,14 @@ The lab operator reached **Data Loss Prevention → Policies** and confirmed tha
 
 ## Pilot entitlement check
 
-On 19 November 2026, the lab operator reported that `PILOT` has Microsoft 365 Business Premium with Copilot, belongs to the label publication group, and has SharePoint Online Plan 1 enabled. The entitlement and enabled SharePoint service plan for `CONTROL` remain to be verified.
+On 19 November 2026, the lab operator reported the following assigned licenses and enabled service plans.
+
+| Test role | Assigned license | SharePoint service |
+| --- | --- | --- |
+| `PILOT` | Microsoft 365 Business Premium with Copilot | SharePoint Online Plan 1 enabled |
+| `CONTROL` | Microsoft 365 Business Premium | SharePoint Online Plan 1 enabled |
+
+This readback satisfies `LIC-02`. Site access and effective file permissions are checked separately.
 
 ## SharePoint sharing baseline
 
