@@ -68,6 +68,8 @@ The [diagnostic workbook](../fixtures/diagnostics/phrase-only.xlsx) keeps the sa
 
 [08 · Phrase-only v2 result](stage-01/08-SIT-02-v2-phrase-only.png) shows that `BFL Finance Case v2` returned `MATCH` on `phrase-only.xlsx`. The result displayed one unique match at each confidence level with `synthetic finance case` under **Matches** and `None` under **Supporting elements**. The workbook contains the phrase and no case identifier. This result is consistent with the saved keyword list functioning as the primary element.
 
+After saving the corrected v2 pattern, the operator retested the same `phrase-only.xlsx` workbook and reported `NO_MATCH`. The initial saved pattern returned `MATCH` on this workbook. The corrected pattern passed this diagnostic control. A positive control will check that a valid case identifier with the supporting phrase still matches. This diagnostic remains outside the 20-file tuning matrix.
+
 ## Captures to collect
 
 | Capture | What to show |
