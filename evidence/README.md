@@ -156,6 +156,10 @@ The first enforcement retest opened both files. The Audit query for `DlpRuleMatc
 - **DLP-02 · PASS.** On the later guest retest, `BFL-005.docx` returned **403 Forbidden** and `BFL-021.docx` opened in view-only mode. The cropped capture shows the HTTP response. The operator's test readback supplies the file and guest context. `LOG-01` tracks correlation with a DLP rule event. [Stage 02 screenshot 04](stage-02/04-DLP-02-guest-denied-BFL-005.png)
 - **DLP-03 · PASS.** The operator confirmed that `CONTROL` opened `BFL-005.docx` after activation.
 
+### DLP audit correlation
+
+**LOG-01 · PENDING.** An Audit search for `DlpRuleMatch` filtered to `BFL-005.docx` from 00:00 through 15:00 UTC on 19 November 2026 returned 0 records. For the follow-up, include the guest-denial time and search by `DlpRuleMatch` and the `ComplianceDLPSharePoint` record type. Review candidate records for the file path and pilot rule. [Audit search](https://learn.microsoft.com/en-us/purview/audit-search) · [DLP audit record schema](https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#dlp-schema)
+
 ## Captures to collect
 
 | Capture | What to show |
