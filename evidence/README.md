@@ -48,6 +48,10 @@ The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no
 
 The lab operator selected `BFL Finance Case v2` for the second test. The result screen confirms the fixture and no-match message. This is the first observed correction on the tuning set. The remaining v2 cases include positive controls to check for missed finance cases.
 
+### Contextual positive control
+
+[07 · BFL-006 match results](stage-01/07-SIT-02-v2-BFL-006.png) confirms one unique match for `BFL Finance Case v2` at each confidence level. Purview displayed `synthetic finance case` under **Matches** and `None` under **Supporting elements**. This is a true positive at file level. The malformed-ID fixture `BFL-016.xlsx` provides a separate check of whether the phrase can trigger a match without a valid identifier.
+
 ## Captures to collect
 
 | Capture | What to show |
