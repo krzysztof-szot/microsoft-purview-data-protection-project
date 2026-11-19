@@ -151,7 +151,7 @@ The next submission returned `InvalidBlockAccessActionException` with `NotifyUse
 
 The operator reported **On** and **Sync completed** for `BFL SharePoint External Access`. The original guest links were unavailable, so the operator generated replacement links for both fixtures. The operator confirmed that the replacement link for `BFL-005.docx` uses **People you choose**, the named-recipient sharing option. [Microsoft sharing options](https://support.microsoft.com/en-us/sharepoint/libraries/sharing-files-folders-and-list-items)
 
-- **DLP-02 · PENDING.** `GUEST` opened both `BFL-005.docx` and `BFL-021.docx` using the replacement links. The first attempt did not produce the expected denial. The next check is a post-activation `DlpRuleMatch` audit search for `BFL-005.docx`. Retain the replacement links privately for the next test.
+- **DLP-02 · PENDING.** `GUEST` opened both `BFL-005.docx` and `BFL-021.docx` using the replacement links. The first attempt did not produce the expected denial. The Audit query for `DlpRuleMatch` on `BFL-005.docx` returned 0 results for 18 November 2026 at 00:00 UTC through 19 November at 14:00 UTC. The next check is the file-level SharePoint DLP diagnostic for policy scope and matching conditions. [Purview diagnostics](https://learn.microsoft.com/en-us/troubleshoot/microsoft-365/purview/diagnostics/purview-compliance-diagnostics#available-diagnostics) Retain the replacement links privately for the next test.
 - **DLP-03 · PASS.** The operator confirmed that `CONTROL` opened `BFL-005.docx` after activation.
 
 ## Captures to collect
