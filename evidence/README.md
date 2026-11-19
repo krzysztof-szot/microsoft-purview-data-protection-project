@@ -36,6 +36,10 @@ The baseline classified all 20 tuning fixtures. The eight finance cases matched 
 
 The five- and seven-digit controls `BFL-015.docx` and `BFL-016.xlsx` returned no match. The v2 experiment will require the supporting phrase within 50 characters of the case ID. See the [per-file register](../tests/classification-results.csv) for the observed results.
 
+## Contextual sensitive information type
+
+[05 · v2 pattern settings](stage-01/05-SIT-02-v2-pattern.png) shows the proposed `BFL Finance Case v2` pattern at High confidence. It reuses the primary regex `BFLCaseIdRegex` and adds the supporting keyword list `BFLFinanceCaseContext` with a 50-character proximity. The operator configured the list with the case-insensitive phrase `synthetic finance case`. File-level outcomes will be recorded during `SIT-02`.
+
 ## Captures to collect
 
 | Capture | What to show |
