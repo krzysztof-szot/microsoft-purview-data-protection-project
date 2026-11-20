@@ -194,7 +194,7 @@ The portal-created label `BFL Retain 30 Days` displayed 29 days. After recreatio
 
 ## Rollback verification
 
-**RBK-01 · PENDING.** On 20 November 2026, the operator confirmed that the same guest and links from `DLP-02` still produced HTTP 403 for `BFL-005.docx` and view-only access to `BFL-021.docx`. The operator reported synchronization in progress after submitting the change to turn off `BFL SharePoint External Access`. A PowerShell readback confirmed `Mode: Disable` and `DistributionStatus: Pending`. A guest retest while distribution was pending still returned HTTP 403 for `BFL-005.docx` while `BFL-021.docx` opened. The recovery check awaits the next retest after distribution.
+**RBK-01 · PENDING.** On 20 November 2026, the operator confirmed that the same guest and links from `DLP-02` still produced HTTP 403 for `BFL-005.docx` and view-only access to `BFL-021.docx`. The operator reported synchronization in progress after submitting the change to turn off `BFL SharePoint External Access`. A PowerShell readback confirmed `Mode: Disable` and `DistributionStatus: Pending`. A guest retest while distribution was pending still returned HTTP 403 for `BFL-005.docx` while `BFL-021.docx` opened. The guest later opened `BFL-005.docx` in **Viewing** using the retained enforcement link. The final neutral-file retest and policy sync readback await confirmation. [Stage 04 screenshot 01](stage-04/01-RBK-01-guest-recovery-BFL-005.png)
 
 ## Captures to collect
 

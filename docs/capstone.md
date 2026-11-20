@@ -22,6 +22,7 @@
 | — | DLP-03 | CONTROL | The internal control user opened `BFL-005.docx` after activation. | [Internal access](../evidence/README.md#access-after-policy-activation) |
 | 2026-11-19 14:20:50 UTC | LOG-01 | ANALYST reviewed the service audit event | Audit associated `BFL-005.docx` with the enabled `BFL Case SIT – Guest Restriction` rule and logged `SPAccessTimeControl` under an administrative identity. | [Redacted audit fields](../evidence/README.md#dlp-audit-correlation) |
 | 2026-11-20 (local date) | RBK-01 | GUEST and authorized admin | The guest reconfirmed the denial and the neutral control. The administrator submitted the change to turn off the policy and reported synchronization in progress. | [Rollback verification](../evidence/README.md#rollback-verification) |
+| 2026-11-20 (local date) | RBK-01 | GUEST | `BFL-005.docx` reopened in **Viewing** through the retained enforcement link. | [Guest recovery](../evidence/stage-04/01-RBK-01-guest-recovery-BFL-005.png) |
 
 The original baseline links were unavailable by the first enforcement retest. The replacement links from `DLP-02` provide the comparison for `RBK-01`. The audit timestamp identifies the rule event. The guest's access results were observed separately.
 
