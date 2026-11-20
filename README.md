@@ -30,7 +30,7 @@
 
 The capstone follows the **same guest account** from baseline access through enforcement and rollback. The rollback test reuses the two links from the enforcement test. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **20 PASS, 1 PENDING and 3 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **20 PASS, 2 PENDING and 2 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
