@@ -180,7 +180,7 @@ The record associates the file with the enabled rule and its logged actions. The
 
 ## Retention label pilot
 
-**RET-01 · PENDING.** The operator created `BFL Retain 30 Days v2` using Security and Compliance PowerShell. `Get-ComplianceTag` confirmed `RetentionDuration: 30`, `RetentionType: TaggedAgeInDays`, and `RetentionAction: Keep`. Publish this version to `BFL-Purview-Pilot` and read back the applied label on `RET-BFL-023.docx` in `Retention-Test`. [Retention label configuration](https://learn.microsoft.com/en-us/purview/retention-settings)
+**RET-01 · PENDING.** The operator created `BFL Retain 30 Days v2` using Security and Compliance PowerShell. `Get-ComplianceTag` confirmed `RetentionDuration: 30`, `RetentionType: TaggedAgeInDays`, and `RetentionAction: Keep`. The operator reported **Enabled (Pending)** for `BFL Retention Pilot Labels` and confirmed `RET-BFL-023.docx` was uploaded to `Retention-Test`. The file-level test awaits application and readback of the label. [Retention label configuration](https://learn.microsoft.com/en-us/purview/retention-settings)
 
 The portal-created label `BFL Retain 30 Days` displayed 29 days. After recreation with a reported input of 30 days, the publication review and the export still showed 29, and PowerShell confirmed the stored value `RetentionDuration: 29`. The cause of the input-to-storage discrepancy is unverified. [PowerShell label readback](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag)
 
