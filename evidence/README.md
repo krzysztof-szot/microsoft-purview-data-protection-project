@@ -174,6 +174,10 @@ The first enforcement retest opened both files. The Audit query for `DlpRuleMatc
 
 The record associates the file with the enabled rule and its logged actions. The event was recorded under an administrative identity. The guest outcome comes from the paired access retest. [DLP audit record schema](https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#dlp-schema) · [Guest access after policy activation](#access-after-policy-activation)
 
+### Sensitivity-label simulation
+
+**SIM-02 · PENDING.** The operator reported **Sync in progress** after submitting `BFL SharePoint Label Simulation`. The test checks whether the `BFL Finance Confidential` label triggers a match for `BFL-022.xlsx`. The completed SharePoint scan provides the comparison with the unlabeled `BFL-021.docx` control.
+
 ## Captures to collect
 
 | Capture | What to show |
