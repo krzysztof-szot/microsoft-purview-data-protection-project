@@ -158,7 +158,21 @@ The first enforcement retest opened both files. The Audit query for `DlpRuleMatc
 
 ### DLP audit correlation
 
-**LOG-01 · PENDING.** An Audit search for `DlpRuleMatch` filtered to `BFL-005.docx` from 00:00 through 15:00 UTC on 19 November 2026 returned 0 records. For the follow-up, include the guest-denial time and search by `DlpRuleMatch` and the `ComplianceDLPSharePoint` record type. Review candidate records for the file path and pilot rule. [Audit search](https://learn.microsoft.com/en-us/purview/audit-search) · [DLP audit record schema](https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#dlp-schema)
+**LOG-01 · PASS.** The first query for `DlpRuleMatch` with the `BFL-005.docx` object filter returned 0 records from 00:00 to 15:00 UTC. The follow-up query with record type `ComplianceDLPSharePoint` returned 2 records from 00:00 to 20:00 UTC on 19 November 2026. The reviewed record contained the following fields.
+
+| Field | Recorded value |
+| --- | --- |
+| Event time | `2026-11-19 14:20:50 UTC` |
+| Workload and operation | `SharePoint` · `DLPRuleMatch` |
+| File | `BFL-005.docx` |
+| Policy | `BFL SharePoint External Access` |
+| Rule and mode | `BFL Case SIT – Guest Restriction` · `Enable` |
+| Matching conditions | `AccessScope: IncludeExternalUsers` and `BFL Finance Case v2` with confidence score 85 and count 1 |
+| Logged actions | `SPAccessTimeControl`, `NotifyUser`, `GenerateAlert` |
+| Severity | `Medium` |
+| Evaluation source | `DlpPolicyEventBasedAssistantSharePoint` |
+
+The record associates the file with the enabled rule and its logged actions. The event was recorded under an administrative identity. The guest outcome comes from the paired access retest. [DLP audit record schema](https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#dlp-schema) · [Guest access after policy activation](#access-after-policy-activation)
 
 ## Captures to collect
 
@@ -168,7 +182,6 @@ The first enforcement retest opened both files. The Audit query for `DlpRuleMatc
 | SIT-01 to SIT-03 | Rule definitions and sanitized per-file classifier outcomes |
 | SIM-01 | Pilot-site scope, simulation mode and matched fixture |
 | DLP-02 and DLP-03 | Guest allow/deny and an ordinary internal user's access |
-| LOG-01 | Rule, file, workload and UTC time in the cited signal |
 | RET-01 to RET-03 | Label state, deletion and independently confirmed preservation |
 | RBK-01 | Disabled pilot policy and reopened confidential file using the same link tested under enforcement |
 
