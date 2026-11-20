@@ -30,7 +30,7 @@
 
 The capstone follows the **same guest account** from baseline access through enforcement and rollback. The rollback test reuses the two links from the enforcement test. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **19 PASS, 2 PENDING and 3 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **20 PASS, 1 PENDING and 3 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -68,6 +68,7 @@ The [test matrix](tests/test-matrix.csv) records **19 PASS, 2 PENDING and 3 NOT_
 | `DLP-01` · Guest baseline before enforcement | The same controlled guest opened both fixtures in view-only mode | [Stage 02 screenshot 02](evidence/stage-02/02-DLP-01-guest-view-BFL-005.png) |
 | `DLP-02` · Guest access after activation | The guest received `403 Forbidden` for `BFL-005.docx` and opened `BFL-021.docx` in view-only mode | [Stage 02 screenshot 04](evidence/stage-02/04-DLP-02-guest-denied-BFL-005.png) |
 | `LOG-01` · DLP audit correlation | SharePoint audit matched `BFL-005.docx` to `BFL Case SIT – Guest Restriction` and logged `SPAccessTimeControl` | [Redacted audit readback](evidence/README.md#dlp-audit-correlation) |
+| `RBK-01` · Guest access restored | After the pilot DLP policy was disabled the guest could open both files through the links used during enforcement | [Stage 04 screenshot 01](evidence/stage-04/01-RBK-01-guest-recovery-BFL-005.png) |
 | `AUTO-01` · Service-side auto-labeling simulation | The pilot rule matched `BFLAutoPilot BFL-007.docx` for `BFL Finance Confidential` | [Stage 03 screenshot 01](evidence/stage-03/01-AUTO-01-sharepoint-simulation-match.png) |
 | `AUTO-02` · Automatic labeling in SharePoint | The pilot policy labeled the fresh finance file and the neutral control was unlabeled in SharePoint | [Stage 03 screenshot 02](evidence/stage-03/02-AUTO-02-sharepoint-label-applied.png) |
 
