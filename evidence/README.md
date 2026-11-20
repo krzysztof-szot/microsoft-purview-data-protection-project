@@ -178,6 +178,10 @@ The record associates the file with the enabled rule and its logged actions. The
 
 **SIM-02 · PENDING.** The operator reported **Sync in progress** after submitting `BFL SharePoint Label Simulation`. The test checks whether the `BFL Finance Confidential` label triggers a match for `BFL-022.xlsx`. The completed SharePoint scan provides the comparison with the unlabeled `BFL-021.docx` control.
 
+## Automatic sensitivity label simulation
+
+**AUTO-01 · PENDING.** The operator confirmed submitting `BFL SharePoint Auto-Label Pilot` in simulation mode for `BFL-Purview-Pilot`. The policy selects `BFL Finance Confidential` when `BFL Finance Case v2` detects at least one high-confidence match and the file name contains `BFLAutoPilot`. The expected candidate is `BFLAutoPilot BFL-007.docx`. `BFLAutoPilot BFL-025.docx` is the neutral control with the same name marker. The simulation report is pending review.
+
 ## Retention label pilot
 
 **RET-01 · PENDING.** The operator created `BFL Retain 30 Days v2` using Security and Compliance PowerShell. `Get-ComplianceTag` confirmed `RetentionDuration: 30`, `RetentionType: TaggedAgeInDays`, and `RetentionAction: Keep`. The operator reported **Enabled (Pending)** for `BFL Retention Pilot Labels` and confirmed `RET-BFL-023.docx` was uploaded to `Retention-Test`. The file-level test awaits application and readback of the label. [Retention label configuration](https://learn.microsoft.com/en-us/purview/retention-settings)
@@ -192,6 +196,7 @@ The portal-created label `BFL Retain 30 Days` displayed 29 days. After recreatio
 | SIT-01 to SIT-03 | Rule definitions and sanitized per-file classifier outcomes |
 | SIM-01 | Pilot-site scope, simulation mode and matched fixture |
 | DLP-02 and DLP-03 | Guest allow/deny and an ordinary internal user's access |
+| AUTO-01 | Completed simulation showing the expected positive fixture in Items to review |
 | RET-01 to RET-03 | Label state, deletion and independently confirmed preservation |
 | RBK-01 | Disabled pilot policy and reopened confidential file using the same link tested under enforcement |
 
