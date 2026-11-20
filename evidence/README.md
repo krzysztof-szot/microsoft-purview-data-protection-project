@@ -180,7 +180,7 @@ The record associates the file with the enabled rule and its logged actions. The
 
 ## Automatic sensitivity label simulation
 
-**AUTO-01 · PENDING.** The operator confirmed submitting `BFL SharePoint Auto-Label Pilot` in simulation mode for `BFL-Purview-Pilot`. The policy selects `BFL Finance Confidential` when `BFL Finance Case v2` detects at least one high-confidence match and the file name contains `BFLAutoPilot`. The expected candidate is `BFLAutoPilot BFL-007.docx`. `BFLAutoPilot BFL-025.docx` is the neutral control with the same name marker. The simulation report is pending review.
+**AUTO-01 · PASS.** The operator confirmed that the `BFL SharePoint Auto-Label Pilot` simulation was complete. **Items to review** showed one SharePoint candidate, `BFLAutoPilot BFL-007.docx`, with `BFL Finance Case v2`. The policy's target label was `BFL Finance Confidential`. The neutral `BFLAutoPilot BFL-025.docx` was absent from the displayed results. The policy had been scoped to `BFL-Purview-Pilot` with the contextual classifier and the `BFLAutoPilot` file-name marker. [Stage 03 screenshot 01](stage-03/01-AUTO-01-sharepoint-simulation-match.png)
 
 ## Retention label pilot
 
