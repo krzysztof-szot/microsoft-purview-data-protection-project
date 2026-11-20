@@ -198,7 +198,7 @@ The portal-created label `BFL Retain 30 Days` displayed 29 days. After recreatio
 
 ## Pilot closure
 
-**CLS-01 · PENDING.** After verifying recovery in `RBK-01`, the operator revoked the two test sharing links for `BFL-005.docx` and `BFL-021.docx`. A guest-session retest of each retained link returned **This link has been removed**. The policy and retained-label inventory remains open.
+**CLS-01 · PENDING.** After verifying recovery in `RBK-01`, the operator revoked the two test sharing links for `BFL-005.docx` and `BFL-021.docx`. A guest-session retest of each retained link returned **This link has been removed**. The operator confirmed **Off** for `BFL SharePoint Auto-Label Pilot`. The remaining-label and subscription checks are pending.
 
 ## Captures to collect
 
