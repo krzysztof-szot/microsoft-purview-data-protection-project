@@ -30,7 +30,7 @@
 
 The capstone compares access using the **same guest account and file links** before enforcement, during enforcement, and after rollback. An analyst correlates the policy match with the file and access attempt. A separate retention test checks whether SharePoint preserves a copy after a user deletes the live document.
 
-The [test matrix](tests/test-matrix.csv) records **16 PASS, 3 PENDING and 5 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
+The [test matrix](tests/test-matrix.csv) records **17 PASS, 2 PENDING and 5 NOT_RUN**. The tuning and holdout evaluations are complete. Microsoft 365 Business Premium is the baseline for the core SharePoint scenario. The [readiness review](docs/readiness.md#advanced-labeling-entitlement-check) records the add-on assignment and the SharePoint scope check for service-side auto-labeling.
 
 ## Explore the Project
 
@@ -64,6 +64,7 @@ The [test matrix](tests/test-matrix.csv) records **16 PASS, 3 PENDING and 5 NOT_
 | `SIT-03` · Holdout evaluation | Frozen v2 matched all 4 finance cases and returned no match on all 6 controls in the separate holdout | [Holdout results](evidence/README.md#holdout-evaluation) |
 | `LBL-01` and `LBL-02` · Manual label persistence | SharePoint displayed the assigned sensitivity label for each test workbook | [Stage 01 screenshot 10](evidence/stage-01/10-LBL-01-LBL-02-sharepoint-sensitivity.png) |
 | `SIM-01` · DLP simulation | The pilot site scan completed with one match across 13 files. The match was `BFL-005.docx` | [Simulation mode](evidence/stage-02/01-SIM-01-dlp-policy-in-simulation.png) · [Stage 02 screenshot 03](evidence/stage-02/03-SIM-01-BFL-005-match.png) |
+| `SIM-02` · Label-based DLP simulation | The completed SharePoint review for 20 November showed three entries for `BFL-022.xlsx` under the label-based rule | [Stage 02 screenshot 05](evidence/stage-02/05-SIM-02-BFL-022-label-match.png) |
 | `DLP-01` · Guest baseline before enforcement | The same controlled guest opened both fixtures in view-only mode | [Stage 02 screenshot 02](evidence/stage-02/02-DLP-01-guest-view-BFL-005.png) |
 | `DLP-02` · Guest access after activation | The guest received `403 Forbidden` for `BFL-005.docx` and opened `BFL-021.docx` in view-only mode | [Stage 02 screenshot 04](evidence/stage-02/04-DLP-02-guest-denied-BFL-005.png) |
 | `LOG-01` · DLP audit correlation | SharePoint audit matched `BFL-005.docx` to `BFL Case SIT – Guest Restriction` and logged `SPAccessTimeControl` | [Redacted audit readback](evidence/README.md#dlp-audit-correlation) |
@@ -92,7 +93,7 @@ The primary DLP rule combines external sharing with a match on the contextual SI
 | --- | --- | --- |
 | 0 · Tenant readiness | Confirm base subscription, pilot accounts, guest baseline and SharePoint DLP availability | Complete |
 | 1 · Classification and labeling | Compare the two classifiers and test the frozen rule on the reserved files. Verify manually applied sensitivity labels in SharePoint | Complete |
-| 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | In progress |
+| 2 · DLP and triage | Simulate the rule, verify guest allow and deny outcomes, and correlate the policy signal | Complete |
 | 3 · Lifecycle controls | Verify preservation after deletion. Exercise service-side auto-labeling if the license permits | In progress |
 | 4 · Capstone and closure | Repeat the allow and deny cases, then verify recovery after policy withdrawal | `NOT_RUN` |
 

@@ -176,7 +176,7 @@ The record associates the file with the enabled rule and its logged actions. The
 
 ### Sensitivity-label simulation
 
-**SIM-02 · PENDING.** The operator reported **Sync in progress** after submitting `BFL SharePoint Label Simulation`. The test checks whether the `BFL Finance Confidential` label triggers a match for `BFL-022.xlsx`. The completed SharePoint scan provides the comparison with the unlabeled `BFL-021.docx` control.
+**SIM-02 · PASS.** The `BFL SharePoint Label Simulation` finished in simulation mode. In **Items for review**, the SharePoint filter for 20 November 2026 showed three rows under `BFL Confidential Label Match`. All three displayed `BFL-022.xlsx`, and the selected row matched one policy rule. The unlabeled `BFL-021.docx` control was absent from the displayed results. [Stage 02 screenshot 05](stage-02/05-SIM-02-BFL-022-label-match.png)
 
 ## Automatic sensitivity label simulation
 
