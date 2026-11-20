@@ -188,6 +188,10 @@ The record associates the file with the enabled rule and its logged actions. The
 
 The portal-created label `BFL Retain 30 Days` displayed 29 days. After recreation with a reported input of 30 days, the publication review and the export still showed 29, and PowerShell confirmed the stored value `RetentionDuration: 29`. The cause of the input-to-storage discrepancy is unverified. [PowerShell label readback](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag)
 
+## Rollback verification
+
+**RBK-01 · PENDING.** On 20 November 2026, the operator confirmed that the same guest and links from `DLP-02` still produced HTTP 403 for `BFL-005.docx` and view-only access to `BFL-021.docx`. The operator reported synchronization in progress after submitting the change to turn off `BFL SharePoint External Access`. The recovery check awaits the synchronized policy and a retest of both links.
+
 ## Captures to collect
 
 | Capture | What to show |
