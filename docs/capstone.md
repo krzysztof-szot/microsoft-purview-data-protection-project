@@ -1,6 +1,6 @@
 # Baltic Finance guest access capstone
 
-**Execution status:** `PENDING`. DLP recovery was verified. Lifecycle verification and closure remain open. See the [test matrix](../tests/test-matrix.csv) for individual observations and the [runbook](runbook.md) for investigation steps.
+**Execution status:** `PENDING`. DLP recovery and administrative closeout were verified. The retention lifecycle tests remain open. See the [test matrix](../tests/test-matrix.csv) for individual observations and the [runbook](runbook.md) for investigation steps.
 
 ## Acceptance cases
 
@@ -24,6 +24,7 @@
 | 2026-11-20 (local date) | RBK-01 | GUEST and authorized admin | The guest reconfirmed the denial and the neutral control. The administrator submitted the change to turn off the policy and reported synchronization in progress. | [Rollback verification](../evidence/README.md#rollback-verification) |
 | 2026-11-20 (local date) | RBK-01 | GUEST and authorized admin | `BFL-005.docx` reopened in **Viewing** and `BFL-021.docx` still opened through its retained link. The operator confirmed the DLP policy was **Off** with **Sync completed**. | [Guest recovery](../evidence/stage-04/01-RBK-01-guest-recovery-BFL-005.png) · [Policy and control readback](../evidence/README.md#rollback-verification) |
 | 2026-11-20 (local date) | CLS-01 | GUEST and authorized admin | The administrator revoked both test links after recovery verification. In the guest session both links returned **This link has been removed**. | [Pilot closure](../evidence/README.md#pilot-closure) |
+| 2026-11-20 (local date) | CLS-01 | Authorized admin | The auto-labeling pilot showed **Off**. Four sensitivity labels remained visible in the test library. Two trial readbacks displayed **Expires on**. | [Policy, label and billing readback](../evidence/README.md#pilot-closure) |
 
 The original baseline links were unavailable by the first enforcement retest. The replacement links from `DLP-02` provide the comparison for `RBK-01`. The audit timestamp identifies the rule event. The guest's access results were observed separately.
 
