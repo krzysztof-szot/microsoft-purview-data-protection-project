@@ -178,6 +178,10 @@ The record associates the file with the enabled rule and its logged actions. The
 
 **SIM-02 · PENDING.** The operator reported **Sync in progress** after submitting `BFL SharePoint Label Simulation`. The test checks whether the `BFL Finance Confidential` label triggers a match for `BFL-022.xlsx`. The completed SharePoint scan provides the comparison with the unlabeled `BFL-021.docx` control.
 
+## Retention label pilot
+
+**RET-01 · PENDING.** The operator reached Purview's creation confirmation for the pilot retention label. The target configuration is `BFL Retain 30 Days`, a regular retention label that starts at labeling and ends with deactivation of the retention settings. Verify the publication scope and the applied label on `RET-BFL-023.docx` in `Retention-Test`. [Retention label configuration](https://learn.microsoft.com/en-us/purview/retention-settings)
+
 ## Captures to collect
 
 | Capture | What to show |
