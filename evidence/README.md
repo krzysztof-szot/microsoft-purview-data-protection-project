@@ -180,7 +180,7 @@ The record associates the file with the enabled rule and its logged actions. The
 
 ## Retention label pilot
 
-**RET-01 · PENDING.** The operator reached Purview's creation confirmation for the pilot retention label. The target configuration is `BFL Retain 30 Days`, a regular retention label that starts at labeling and ends with deactivation of the retention settings. The Labels list showed **Retain labeled item for 29 days** for `BFL Retain 30 Days`. Verify the saved duration before publishing. The test also requires publication scope and the applied label readback on `RET-BFL-023.docx` in `Retention-Test`. [Retention label configuration](https://learn.microsoft.com/en-us/purview/retention-settings)
+**RET-01 · PENDING.** The operator reached Purview's creation confirmation for the pilot retention label. The target configuration is `BFL Retain 30 Days`, a regular retention label that starts at labeling and ends with deactivation of the retention settings. The first version displayed **Retain labeled item for 29 days**. The operator removed that version and returned to the publishing wizard after recreating the label. Verify the replacement label duration before submitting publication. The test also requires publication scope and the applied label readback on `RET-BFL-023.docx` in `Retention-Test`. [Retention label configuration](https://learn.microsoft.com/en-us/purview/retention-settings)
 
 ## Captures to collect
 
