@@ -182,7 +182,7 @@ The record associates the file with the enabled rule and its logged actions. The
 
 **AUTO-01 · PASS.** The operator confirmed that the `BFL SharePoint Auto-Label Pilot` simulation was complete. **Items to review** showed one SharePoint candidate, `BFLAutoPilot BFL-007.docx`, with `BFL Finance Case v2`. The policy's target label was `BFL Finance Confidential`. The neutral `BFLAutoPilot BFL-025.docx` was absent from the displayed results. The policy had been scoped to `BFL-Purview-Pilot` with the contextual classifier and the `BFLAutoPilot` file-name marker. [Stage 03 screenshot 01](stage-03/01-AUTO-01-sharepoint-simulation-match.png)
 
-**AUTO-02 · PENDING.** The operator confirmed that the fresh copies `BFLAutoPilot BFL-001.docx` and `BFLAutoPilot BFL-027.docx` were uploaded to `Finance-Test`. The positive case should receive `BFL Finance Confidential` through the pilot policy. The neutral control should remain unlabeled. File-level readback is pending.
+**AUTO-02 · PASS.** The operator uploaded the fresh copies `BFLAutoPilot BFL-001.docx` and `BFLAutoPilot BFL-027.docx` to `Finance-Test`. The SharePoint **Sensitivity** column showed `BFL Finance Confidential` on the positive file and a blank value on the neutral control. The operator confirmed the positive file in **Labeled items** for `BFL SharePoint Auto-Label Pilot`. [Stage 03 screenshot 02](stage-03/02-AUTO-02-sharepoint-label-applied.png)
 
 ## Retention label pilot
 
