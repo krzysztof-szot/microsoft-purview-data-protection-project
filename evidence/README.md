@@ -198,7 +198,16 @@ The portal-created label `BFL Retain 30 Days` displayed 29 days. After recreatio
 
 ## Pilot closure
 
-**CLS-01 · PENDING.** After verifying recovery in `RBK-01`, the operator revoked the two test sharing links for `BFL-005.docx` and `BFL-021.docx`. A guest-session retest of each retained link returned **This link has been removed**. The operator confirmed **Off** for `BFL SharePoint Auto-Label Pilot`. The remaining-label and subscription checks are pending.
+**CLS-01 · PENDING.** After verifying recovery in `RBK-01`, the operator revoked the two test sharing links for `BFL-005.docx` and `BFL-021.docx`. A guest-session retest of each retained link returned **This link has been removed**. The operator confirmed **Off** for `BFL SharePoint Auto-Label Pilot`. A SharePoint readback showed these four remaining sensitivity labels in `Finance-Test`.
+
+| File | Sensitivity label |
+| --- | --- |
+| `BFL-022.xlsx` | BFL Finance Confidential |
+| `BFL-024.xlsx` | BFL Internal |
+| `BFLAutoPilot BFL-001.docx` | BFL Finance Confidential |
+| `BFLAutoPilot BFL-007.docx` | BFL Finance Confidential |
+
+A closeout subscription readback reported **Recurring billing: On** with a scheduled conversion to a paid subscription. The exact product and both final billing settings await confirmation.
 
 ## Captures to collect
 
